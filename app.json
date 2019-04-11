@@ -1,16 +1,13 @@
 {
-  "addons": [
-
-  ],
-  "buildpacks": [
-
-  ],
+  "addons": [],
+  "buildpacks": [],
   "env": {
+    "NODE_ENV": {
+      "value": "production"
+    }
   },
-  "formation": {
-  },
+  "formation": {},
   "name": "ireporter-react",
-  "scripts": {
-  },
+  "scripts": {},
   "stack": "heroku-18"
 }
