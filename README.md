@@ -1,2 +1,3 @@
+[![Build Status](https://travis-ci.com/LordUche/ireporter-react.svg?branch=develop)](https://travis-ci.com/LordUche/ireporter-react) [![Maintainability](https://api.codeclimate.com/v1/badges/8e286e73f151123f91dd/maintainability)](https://codeclimate.com/github/LordUche/ireporter-react/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/8e286e73f151123f91dd/test_coverage)](https://codeclimate.com/github/LordUche/ireporter-react/test_coverage)
 # ireporter-react
 iReporter enables any/every citizen to bring any form of corruption to the notice of appropriate authorities and the general public. Users can also report on things that needs government intervention
