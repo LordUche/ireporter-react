@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+require('dotenv/config');
 
 module.exports = {
   entry: './src/index.js',
@@ -36,13 +37,12 @@ module.exports = {
               reloadAll: true,
             },
           },
-          'style-loader',
           'css-loader',
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader', ImageminPlugin.loader],
+        test: /\.(png|svg|jpe?g|gif)$/,
+        use: ['file-loader'],
       },
       {
         test: /\.(ttf|eot|otf|woff|woff2)$/,
@@ -60,11 +60,14 @@ module.exports = {
     usedExports: true,
   },
   plugins: [
+    new ImageminPlugin({
+      disable: process.env.NODE_ENV !== 'production',
+      test: /\.(jpe?g|png|gif|svg)$/i,
+    }),
     new webpack.EnvironmentPlugin([
       'NODE_ENV',
       'API_BASE_URL',
-      'CLOUD_NAME',
-      'UPLOAD_PRESET',
+      'CLOUDINARY_URL',
     ]),
     new HtmlWebpackPlugin({
       template: path.resolve('./public/index.html'),
@@ -74,10 +77,6 @@ module.exports = {
       // both options are optional
       filename: '[name].css',
       chunkFilename: '[id].css',
-    }),
-    new ImageminPlugin({
-      cache: true,
-      bail: false,
     }),
   ],
   devtool: 'inline-source-map',

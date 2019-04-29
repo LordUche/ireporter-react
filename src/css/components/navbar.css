@@ -1,0 +1,17 @@
+.navbar {
+  width: 100%;
+}
+
+.navbar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__brand .navbar__brand--text {
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.navbar.secondary.menu {
+  margin: 0;
+}
