@@ -67,7 +67,8 @@ module.exports = {
     new webpack.EnvironmentPlugin([
       'NODE_ENV',
       'API_BASE_URL',
-      'CLOUDINARY_URL',
+      'CLOUD_NAME',
+      'UPLOAD_PRESET',
     ]),
     new HtmlWebpackPlugin({
       template: path.resolve('./public/index.html'),

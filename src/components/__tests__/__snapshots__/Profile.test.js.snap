@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Profile /> should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "pvmwqu",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "pvmwqu",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Profile>
+        <div>
+          <Button
+            as={[Function]}
+            color="red"
+            content="REPORT AN INCIDENT"
+            to="/report"
+          >
+            <Ref
+              innerRef={
+                Object {
+                  "current": <a
+                    class="ui red button"
+                    href="/report"
+                    role="button"
+                  >
+                    REPORT AN INCIDENT
+                  </a>,
+                }
+              }
+            >
+              <RefFindNode
+                innerRef={
+                  Object {
+                    "current": <a
+                      class="ui red button"
+                      href="/report"
+                      role="button"
+                    >
+                      REPORT AN INCIDENT
+                    </a>,
+                  }
+                }
+              >
+                <Link
+                  className="ui red button"
+                  onClick={[Function]}
+                  role="button"
+                  to="/report"
+                >
+                  <a
+                    className="ui red button"
+                    href="/report"
+                    onClick={[Function]}
+                    role="button"
+                  >
+                    REPORT AN INCIDENT
+                  </a>
+                </Link>
+              </RefFindNode>
+            </Ref>
+          </Button>
+        </div>
+      </Profile>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
