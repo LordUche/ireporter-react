@@ -2,17 +2,16 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJSON from 'enzyme-to-json';
 import { Provider } from 'react-redux';
-import App from '../App';
-import { mockStore } from '../../../test/setupTests';
+import LoginForm from '../LoginForm';
+import store from '../../redux/store';
 
-describe('<App />', () => {
+describe('<LoginForm />', () => {
   let wrapper;
-  const initialState = { auth: { loggedIn: false, loading: false } };
-  const store = mockStore({ ...initialState });
+
   beforeEach(() => {
     wrapper = mount(
       <Provider store={store}>
-        <App />
+        <LoginForm />
       </Provider>
     );
   });

@@ -1,31 +1,39 @@
-import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from '../actions/login';
+import {
+  AUTH_REQUEST,
+  AUTH_SUCCESS,
+  AUTH_FAILURE,
+  LOGOUT,
+} from '../actions/auth';
 
 const initialState = {
   loggedIn: false,
   loading: false,
   user: null,
-  error: null,
+  errors: null,
 };
 
-const loginReducer = (state = initialState, action) => {
+const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOGIN_REQUEST:
+    case AUTH_REQUEST:
       return { ...state, loading: true };
 
-    case LOGIN_SUCCESS:
+    case AUTH_SUCCESS:
       return { ...state, user: action.payload, loading: false, loggedIn: true };
 
-    case LOGIN_FAILURE:
+    case AUTH_FAILURE:
       return {
         ...state,
-        error: action.payload,
+        errors: action.payload,
         loading: false,
         loggedIn: false,
       };
+
+    case LOGOUT:
+      return initialState;
 
     default:
       return state;
   }
 };
 
-export default loginReducer;
+export default authReducer;

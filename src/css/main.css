@@ -1,4 +1,6 @@
+@import "~react-toastify/dist/ReactToastify.min.css";
 @import "base/reset.css";
 @import "utilities/colors.css";
 @import "pages/landing.css";
 @import "components/navbar.css";
+@import "components/signup-form.css";

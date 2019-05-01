@@ -10,6 +10,7 @@
 .navbar__brand .navbar__brand--text {
   margin: 0;
   margin-left: 1rem;
+  color: #ffffff;
 }
 
 .navbar.secondary.menu {

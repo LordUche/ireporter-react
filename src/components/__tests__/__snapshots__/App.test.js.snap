@@ -4,23 +4,19 @@ exports[`<App /> should match snapshot 1`] = `
 <Provider
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
 >
   <ConnectFunction>
     <App
-      dispatch={[Function]}
-      login={
-        Object {
-          "loading": false,
-          "loggedIn": false,
-        }
-      }
+      getCurrentUser={[Function]}
+      loggedIn={false}
     >
       <BrowserRouter>
         <Router
@@ -45,70 +41,36 @@ exports[`<App /> should match snapshot 1`] = `
             }
           }
         >
-          <Sidenav
+          <ConnectFunction
             hideSidebar={[Function]}
             visible={false}
           >
-            <SidebarPushable
-              as={[Function]}
+            <Sidenav
+              hideSidebar={[Function]}
+              loggedIn={false}
+              logout={[Function]}
+              visible={false}
             >
-              <Segment
-                className="pushable"
+              <SidebarPushable
+                as={[Function]}
               >
-                <div
-                  className="ui segment pushable"
+                <Segment
+                  className="pushable"
                 >
-                  <Sidebar
-                    animation="uncover"
-                    as={[Function]}
-                    direction="right"
-                    icon="labeled"
-                    onHide={[Function]}
-                    vertical={true}
-                    visible={false}
-                    width="thin"
+                  <div
+                    className="ui segment pushable"
                   >
-                    <Ref
-                      innerRef={
-                        Object {
-                          "current": <div
-                            class="ui vertical labeled icon ui uncover right thin sidebar menu"
-                          >
-                            <a
-                              class="item"
-                              href="/"
-                            >
-                              <i
-                                aria-hidden="true"
-                                class="home icon"
-                              />
-                              Home
-                            </a>
-                            <a
-                              class="item"
-                              href="/login"
-                            >
-                              <i
-                                aria-hidden="true"
-                                class="sign in icon"
-                              />
-                              Log In
-                            </a>
-                            <a
-                              class="item"
-                              href="/signup"
-                            >
-                              <i
-                                aria-hidden="true"
-                                class="signup icon"
-                              />
-                              Sign Up
-                            </a>
-                          </div>,
-                        }
-                      }
+                    <Sidebar
+                      animation="uncover"
+                      as={[Function]}
+                      direction="right"
+                      icon="labeled"
+                      onHide={[Function]}
+                      vertical={true}
+                      visible={false}
+                      width="thin"
                     >
-                      <RefFindNode
+                      <Ref
                         innerRef={
                           Object {
                             "current": <div
@@ -125,7 +87,7 @@ exports[`<App /> should match snapshot 1`] = `
                                 Home
                               </a>
                               <a
-                                class="item"
+                                class="item sidebar__login-button"
                                 href="/login"
                               >
                                 <i
@@ -135,7 +97,7 @@ exports[`<App /> should match snapshot 1`] = `
                                 Log In
                               </a>
                               <a
-                                class="item"
+                                class="item sidebar__signup-button"
                                 href="/signup"
                               >
                                 <i
@@ -148,263 +110,346 @@ exports[`<App /> should match snapshot 1`] = `
                           }
                         }
                       >
-                        <Menu
-                          className="ui uncover right thin sidebar"
-                          icon="labeled"
-                          vertical={true}
+                        <RefFindNode
+                          innerRef={
+                            Object {
+                              "current": <div
+                                class="ui vertical labeled icon ui uncover right thin sidebar menu"
+                              >
+                                <a
+                                  class="item"
+                                  href="/"
+                                >
+                                  <i
+                                    aria-hidden="true"
+                                    class="home icon"
+                                  />
+                                  Home
+                                </a>
+                                <a
+                                  class="item sidebar__login-button"
+                                  href="/login"
+                                >
+                                  <i
+                                    aria-hidden="true"
+                                    class="sign in icon"
+                                  />
+                                  Log In
+                                </a>
+                                <a
+                                  class="item sidebar__signup-button"
+                                  href="/signup"
+                                >
+                                  <i
+                                    aria-hidden="true"
+                                    class="signup icon"
+                                  />
+                                  Sign Up
+                                </a>
+                              </div>,
+                            }
+                          }
                         >
-                          <div
-                            className="ui vertical labeled icon ui uncover right thin sidebar menu"
+                          <Menu
+                            className="ui uncover right thin sidebar"
+                            icon="labeled"
+                            vertical={true}
                           >
-                            <MenuItem
-                              as={[Function]}
-                              onClick={[Function]}
-                              to="/"
+                            <div
+                              className="ui vertical labeled icon ui uncover right thin sidebar menu"
                             >
-                              <Link
-                                className="item"
+                              <MenuItem
+                                as={[Function]}
                                 onClick={[Function]}
                                 to="/"
                               >
-                                <a
+                                <Link
                                   className="item"
-                                  href="/"
                                   onClick={[Function]}
+                                  to="/"
                                 >
-                                  <Icon
-                                    as="i"
-                                    name="home"
+                                  <a
+                                    className="item"
+                                    href="/"
+                                    onClick={[Function]}
                                   >
-                                    <i
-                                      aria-hidden="true"
-                                      className="home icon"
-                                      onClick={[Function]}
-                                    />
-                                  </Icon>
-                                  Home
-                                </a>
-                              </Link>
-                            </MenuItem>
-                            <MenuItem
-                              as={[Function]}
-                              onClick={[Function]}
-                              to="/login"
-                            >
-                              <Link
-                                className="item"
+                                    <Icon
+                                      as="i"
+                                      name="home"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        className="home icon"
+                                        onClick={[Function]}
+                                      />
+                                    </Icon>
+                                    Home
+                                  </a>
+                                </Link>
+                              </MenuItem>
+                              <MenuItem
+                                as={[Function]}
+                                className="sidebar__login-button"
                                 onClick={[Function]}
                                 to="/login"
                               >
-                                <a
-                                  className="item"
-                                  href="/login"
+                                <Link
+                                  className="item sidebar__login-button"
                                   onClick={[Function]}
+                                  to="/login"
                                 >
-                                  <Icon
-                                    as="i"
-                                    name="sign in"
+                                  <a
+                                    className="item sidebar__login-button"
+                                    href="/login"
+                                    onClick={[Function]}
                                   >
-                                    <i
-                                      aria-hidden="true"
-                                      className="sign in icon"
-                                      onClick={[Function]}
-                                    />
-                                  </Icon>
-                                  Log In
-                                </a>
-                              </Link>
-                            </MenuItem>
-                            <MenuItem
-                              as={[Function]}
-                              onClick={[Function]}
-                              to="/signup"
-                            >
-                              <Link
-                                className="item"
+                                    <Icon
+                                      as="i"
+                                      name="sign in"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        className="sign in icon"
+                                        onClick={[Function]}
+                                      />
+                                    </Icon>
+                                    Log In
+                                  </a>
+                                </Link>
+                              </MenuItem>
+                              <MenuItem
+                                as={[Function]}
+                                className="sidebar__signup-button"
                                 onClick={[Function]}
                                 to="/signup"
                               >
-                                <a
-                                  className="item"
-                                  href="/signup"
+                                <Link
+                                  className="item sidebar__signup-button"
                                   onClick={[Function]}
+                                  to="/signup"
                                 >
-                                  <Icon
-                                    as="i"
-                                    name="signup"
+                                  <a
+                                    className="item sidebar__signup-button"
+                                    href="/signup"
+                                    onClick={[Function]}
                                   >
-                                    <i
-                                      aria-hidden="true"
-                                      className="signup icon"
-                                      onClick={[Function]}
-                                    />
-                                  </Icon>
-                                  Sign Up
-                                </a>
-                              </Link>
-                            </MenuItem>
-                          </div>
-                        </Menu>
-                      </RefFindNode>
-                    </Ref>
-                  </Sidebar>
-                  <SidebarPusher>
-                    <div
-                      className="pusher"
-                    >
-                      <Segment
-                        basic={true}
+                                    <Icon
+                                      as="i"
+                                      name="signup"
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        className="signup icon"
+                                        onClick={[Function]}
+                                      />
+                                    </Icon>
+                                    Sign Up
+                                  </a>
+                                </Link>
+                              </MenuItem>
+                            </div>
+                          </Menu>
+                        </RefFindNode>
+                      </Ref>
+                    </Sidebar>
+                    <SidebarPusher>
+                      <div
+                        className="pusher"
                       >
-                        <div
-                          className="ui basic segment"
-                        >
-                          <main>
+                        <main>
+                          <ConnectFunction
+                            closeSidebar={[Function]}
+                            loggedIn={false}
+                            openSidebar={[Function]}
+                            sidebarOpen={false}
+                          >
                             <Navbar
                               closeSidebar={[Function]}
                               loggedIn={false}
+                              logout={[Function]}
                               openSidebar={[Function]}
                               sidebarOpen={false}
+                              user={null}
                             >
                               <nav
                                 className="navbar"
                               >
-                                <Menu
-                                  color="pink"
-                                  secondary={true}
+                                <Segment
+                                  inverted={true}
                                 >
                                   <div
-                                    className="ui pink secondary menu"
+                                    className="ui inverted segment"
                                   >
-                                    <Container>
+                                    <Menu
+                                      inverted={true}
+                                      secondary={true}
+                                    >
                                       <div
-                                        className="ui container"
+                                        className="ui inverted secondary menu"
                                       >
-                                        <MenuItem
-                                          as={[Function]}
-                                          className="navbar__brand"
-                                          icon={true}
-                                          to="/"
-                                        >
-                                          <Link
-                                            className="icon item navbar__brand"
-                                            onClick={[Function]}
-                                            to="/"
+                                        <Container>
+                                          <div
+                                            className="ui container"
                                           >
-                                            <a
-                                              className="icon item navbar__brand"
-                                              href="/"
-                                              onClick={[Function]}
+                                            <MenuItem
+                                              as={[Function]}
+                                              className="navbar__brand"
+                                              icon={true}
+                                              to="/"
                                             >
-                                              <Image
-                                                as="img"
-                                                className="navbar__brand--icon"
-                                                size="mini"
-                                                spaced="right"
-                                                src="test-file-stub"
-                                                ui={true}
+                                              <Link
+                                                className="icon item navbar__brand"
+                                                onClick={[Function]}
+                                                to="/"
                                               >
-                                                <img
-                                                  className="ui mini right spaced image navbar__brand--icon"
-                                                  src="test-file-stub"
-                                                />
-                                              </Image>
-                                              <Header
-                                                as="h3"
-                                                className="navbar__brand--text"
-                                              >
-                                                <h3
-                                                  className="ui header navbar__brand--text"
+                                                <a
+                                                  className="icon item navbar__brand"
+                                                  href="/"
+                                                  onClick={[Function]}
                                                 >
-                                                  iREPORTER
-                                                </h3>
-                                              </Header>
-                                            </a>
-                                          </Link>
-                                        </MenuItem>
-                                        <Responsive
-                                          as={[Function]}
-                                          getWidth={[Function]}
-                                          minWidth={768}
-                                          position="right"
-                                        >
-                                          <MenuMenu
-                                            position="right"
-                                          >
-                                            <div
-                                              className="right menu"
+                                                  <Image
+                                                    as="img"
+                                                    className="navbar__brand--icon"
+                                                    size="mini"
+                                                    spaced="right"
+                                                    src="test-file-stub"
+                                                    ui={true}
+                                                  >
+                                                    <img
+                                                      className="ui mini right spaced image navbar__brand--icon"
+                                                      src="test-file-stub"
+                                                    />
+                                                  </Image>
+                                                  <Header
+                                                    className="navbar__brand--text"
+                                                  >
+                                                    <div
+                                                      className="ui header navbar__brand--text"
+                                                    >
+                                                      iREPORTER
+                                                    </div>
+                                                  </Header>
+                                                </a>
+                                              </Link>
+                                            </MenuItem>
+                                            <Responsive
+                                              as={[Function]}
+                                              getWidth={[Function]}
+                                              minWidth={769}
+                                              position="right"
                                             >
-                                              <MenuItem
-                                                as={[Function]}
-                                                name="sign up"
-                                                to="/signup"
+                                              <MenuMenu
+                                                position="right"
                                               >
-                                                <Link
-                                                  className="item"
-                                                  onClick={[Function]}
-                                                  to="/signup"
+                                                <div
+                                                  className="right menu"
                                                 >
-                                                  <a
-                                                    className="item"
-                                                    href="/signup"
-                                                    onClick={[Function]}
+                                                  <MenuItem
+                                                    as={[Function]}
+                                                    name="sign up"
+                                                    to="/signup"
                                                   >
-                                                    Sign Up
-                                                  </a>
-                                                </Link>
-                                              </MenuItem>
-                                              <MenuItem
-                                                as={[Function]}
-                                                name="log in"
-                                                to="/login"
-                                              >
-                                                <Link
-                                                  className="item"
-                                                  onClick={[Function]}
-                                                  to="/login"
-                                                >
-                                                  <a
-                                                    className="item"
-                                                    href="/login"
-                                                    onClick={[Function]}
+                                                    <Link
+                                                      className="item"
+                                                      onClick={[Function]}
+                                                      to="/signup"
+                                                    >
+                                                      <a
+                                                        className="item"
+                                                        href="/signup"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Sign Up
+                                                      </a>
+                                                    </Link>
+                                                  </MenuItem>
+                                                  <MenuItem
+                                                    as={[Function]}
+                                                    name="log in"
+                                                    to="/login"
                                                   >
-                                                    Log In
-                                                  </a>
-                                                </Link>
-                                              </MenuItem>
-                                            </div>
-                                          </MenuMenu>
-                                        </Responsive>
-                                        <Responsive
-                                          as={[Function]}
-                                          getWidth={[Function]}
-                                          maxWidth={768}
-                                          position="right"
-                                        />
+                                                    <Link
+                                                      className="item"
+                                                      onClick={[Function]}
+                                                      to="/login"
+                                                    >
+                                                      <a
+                                                        className="item"
+                                                        href="/login"
+                                                        onClick={[Function]}
+                                                      >
+                                                        Log In
+                                                      </a>
+                                                    </Link>
+                                                  </MenuItem>
+                                                </div>
+                                              </MenuMenu>
+                                            </Responsive>
+                                            <Responsive
+                                              as={[Function]}
+                                              getWidth={[Function]}
+                                              maxWidth={768}
+                                              position="right"
+                                            />
+                                          </div>
+                                        </Container>
                                       </div>
-                                    </Container>
+                                    </Menu>
                                   </div>
-                                </Menu>
+                                </Segment>
                               </nav>
                             </Navbar>
-                            <Container
-                              className="main-content"
+                          </ConnectFunction>
+                          <Container
+                            className="main-content"
+                          >
+                            <div
+                              className="ui container main-content"
                             >
-                              <div
-                                className="ui container main-content"
-                              >
-                                <Routes>
-                                  <Switch>
-                                    <Route
-                                      component={[Function]}
-                                      computedMatch={
+                              <Routes>
+                                <Switch>
+                                  <Route
+                                    component={[Function]}
+                                    computedMatch={
+                                      Object {
+                                        "isExact": true,
+                                        "params": Object {},
+                                        "path": "/",
+                                        "url": "/",
+                                      }
+                                    }
+                                    exact={true}
+                                    location={
+                                      Object {
+                                        "hash": "",
+                                        "pathname": "/",
+                                        "search": "",
+                                        "state": undefined,
+                                      }
+                                    }
+                                    path="/"
+                                  >
+                                    <Landing
+                                      history={
                                         Object {
-                                          "isExact": true,
-                                          "params": Object {},
-                                          "path": "/",
-                                          "url": "/",
+                                          "action": "POP",
+                                          "block": [Function],
+                                          "createHref": [Function],
+                                          "go": [Function],
+                                          "goBack": [Function],
+                                          "goForward": [Function],
+                                          "length": 1,
+                                          "listen": [Function],
+                                          "location": Object {
+                                            "hash": "",
+                                            "pathname": "/",
+                                            "search": "",
+                                            "state": undefined,
+                                          },
+                                          "push": [Function],
+                                          "replace": [Function],
                                         }
                                       }
-                                      exact={true}
                                       location={
                                         Object {
                                           "hash": "",
@@ -413,98 +458,146 @@ exports[`<App /> should match snapshot 1`] = `
                                           "state": undefined,
                                         }
                                       }
-                                      path="/"
+                                      match={
+                                        Object {
+                                          "isExact": true,
+                                          "params": Object {},
+                                          "path": "/",
+                                          "url": "/",
+                                        }
+                                      }
                                     >
-                                      <Landing
-                                        history={
-                                          Object {
-                                            "action": "POP",
-                                            "block": [Function],
-                                            "createHref": [Function],
-                                            "go": [Function],
-                                            "goBack": [Function],
-                                            "goForward": [Function],
-                                            "length": 1,
-                                            "listen": [Function],
-                                            "location": Object {
-                                              "hash": "",
-                                              "pathname": "/",
-                                              "search": "",
-                                              "state": undefined,
-                                            },
-                                            "push": [Function],
-                                            "replace": [Function],
-                                          }
-                                        }
-                                        location={
-                                          Object {
-                                            "hash": "",
-                                            "pathname": "/",
-                                            "search": "",
-                                            "state": undefined,
-                                          }
-                                        }
-                                        match={
-                                          Object {
-                                            "isExact": true,
-                                            "params": Object {},
-                                            "path": "/",
-                                            "url": "/",
-                                          }
-                                        }
+                                      <div
+                                        className="landing"
                                       >
-                                        <div
-                                          className="landing"
+                                        <Header
+                                          as="h1"
+                                          className="landing-header"
                                         >
-                                          <Header
-                                            as="h1"
-                                            className="landing__header"
+                                          <h1
+                                            className="ui header landing-header"
                                           >
-                                            <h1
-                                              className="ui header landing__header"
-                                            >
-                                              See something? 
-                                              <br />
-                                               Report it!
-                                            </h1>
-                                          </Header>
-                                          <HeaderSubheader>
-                                            <div
-                                              className="sub header"
-                                            >
-                                              <span>
-                                                Say 
-                                                <span
-                                                  className="color-red"
+                                            See something? 
+                                            <br />
+                                             Report it!
+                                          </h1>
+                                        </Header>
+                                        <HeaderSubheader
+                                          className="landing__subheader"
+                                        >
+                                          <div
+                                            className="sub header landing__subheader"
+                                          >
+                                            <span>
+                                              Say 
+                                              <span
+                                                className="color-red"
+                                              >
+                                                NO
+                                              </span>
+                                               to corruption
+                                            </span>
+                                            <br />
+                                            <span>
+                                              Be the voice in your community
+                                            </span>
+                                          </div>
+                                        </HeaderSubheader>
+                                        <Button
+                                          as={[Function]}
+                                          color="red"
+                                          content="GET STARTED"
+                                          to="/signup"
+                                        >
+                                          <Ref
+                                            innerRef={
+                                              Object {
+                                                "current": <a
+                                                  class="ui red button"
+                                                  href="/signup"
+                                                  role="button"
                                                 >
-                                                  NO
-                                                </span>
-                                                 to corruption
-                                              </span>
-                                              <br />
-                                              <span>
-                                                Be the voice in your community
-                                              </span>
-                                            </div>
-                                          </HeaderSubheader>
-                                        </div>
-                                      </Landing>
-                                    </Route>
-                                  </Switch>
-                                </Routes>
-                              </div>
-                            </Container>
-                          </main>
-                        </div>
-                      </Segment>
-                    </div>
-                  </SidebarPusher>
-                </div>
-              </Segment>
-            </SidebarPushable>
-          </Sidenav>
+                                                  GET STARTED
+                                                </a>,
+                                              }
+                                            }
+                                          >
+                                            <RefFindNode
+                                              innerRef={
+                                                Object {
+                                                  "current": <a
+                                                    class="ui red button"
+                                                    href="/signup"
+                                                    role="button"
+                                                  >
+                                                    GET STARTED
+                                                  </a>,
+                                                }
+                                              }
+                                            >
+                                              <Link
+                                                className="ui red button"
+                                                onClick={[Function]}
+                                                role="button"
+                                                to="/signup"
+                                              >
+                                                <a
+                                                  className="ui red button"
+                                                  href="/signup"
+                                                  onClick={[Function]}
+                                                  role="button"
+                                                >
+                                                  GET STARTED
+                                                </a>
+                                              </Link>
+                                            </RefFindNode>
+                                          </Ref>
+                                        </Button>
+                                      </div>
+                                    </Landing>
+                                  </Route>
+                                </Switch>
+                              </Routes>
+                            </div>
+                          </Container>
+                        </main>
+                      </div>
+                    </SidebarPusher>
+                  </div>
+                </Segment>
+              </SidebarPushable>
+            </Sidenav>
+          </ConnectFunction>
         </Router>
       </BrowserRouter>
+      <ToastContainer
+        autoClose={5000}
+        bodyClassName={null}
+        className={null}
+        closeButton={
+          <CloseButton
+            ariaLabel="close"
+          />
+        }
+        closeOnClick={true}
+        draggable={true}
+        draggablePercent={80}
+        hideProgressBar={false}
+        newestOnTop={false}
+        pauseOnFocusLoss={true}
+        pauseOnHover={true}
+        position="top-right"
+        progressClassName={null}
+        progressStyle={null}
+        rtl={false}
+        style={null}
+        toastClassName={null}
+        transition={[Function]}
+      >
+        <div
+          className="Toastify"
+        />
+      </ToastContainer>
     </App>
   </ConnectFunction>
 </Provider>

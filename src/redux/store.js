@@ -8,7 +8,7 @@ const middleware = [thunk];
 
 process.env.NODE_ENV === `development` && middleware.push(logger);
 
-const initialState = { login: { loggedIn: false, loading: false } };
+const initialState = { auth: { loggedIn: false, loading: false } };
 const store = createStore(
   rootReducer,
   initialState,

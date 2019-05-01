@@ -2,9 +2,9 @@
   "addons": [],
   "buildpacks": [],
   "env": {
-    "NODE_ENV": {
-      "value": "production"
-    }
+    "NODE_ENV": { "required": true },
+    "API_BASE_URL": { "required": true },
+    "CLOUDINARY_URL": { "required": true }
   },
   "formation": {},
   "name": "ireporter-react",
