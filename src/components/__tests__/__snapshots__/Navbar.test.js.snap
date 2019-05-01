@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar /> should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "iupbkx",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "iupbkx",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <ConnectFunction
+        loggedIn={false}
+        logout={[MockFunction]}
+        openSidebar={[MockFunction]}
+      >
+        <Navbar
+          loggedIn={false}
+          logout={[Function]}
+          openSidebar={[MockFunction]}
+          user={null}
+        >
+          <nav
+            className="navbar"
+          >
+            <Segment
+              inverted={true}
+            >
+              <div
+                className="ui inverted segment"
+              >
+                <Menu
+                  inverted={true}
+                  secondary={true}
+                >
+                  <div
+                    className="ui inverted secondary menu"
+                  >
+                    <Container>
+                      <div
+                        className="ui container"
+                      >
+                        <MenuItem
+                          as={[Function]}
+                          className="navbar__brand"
+                          icon={true}
+                          to="/"
+                        >
+                          <Link
+                            className="icon item navbar__brand"
+                            onClick={[Function]}
+                            to="/"
+                          >
+                            <a
+                              className="icon item navbar__brand"
+                              href="/"
+                              onClick={[Function]}
+                            >
+                              <Image
+                                as="img"
+                                className="navbar__brand--icon"
+                                size="mini"
+                                spaced="right"
+                                src="test-file-stub"
+                                ui={true}
+                              >
+                                <img
+                                  className="ui mini right spaced image navbar__brand--icon"
+                                  src="test-file-stub"
+                                />
+                              </Image>
+                              <Header
+                                className="navbar__brand--text"
+                              >
+                                <div
+                                  className="ui header navbar__brand--text"
+                                >
+                                  iREPORTER
+                                </div>
+                              </Header>
+                            </a>
+                          </Link>
+                        </MenuItem>
+                        <Responsive
+                          as={[Function]}
+                          getWidth={[Function]}
+                          minWidth={769}
+                          position="right"
+                        >
+                          <MenuMenu
+                            position="right"
+                          >
+                            <div
+                              className="right menu"
+                            >
+                              <MenuItem
+                                as={[Function]}
+                                name="sign up"
+                                to="/signup"
+                              >
+                                <Link
+                                  className="item"
+                                  onClick={[Function]}
+                                  to="/signup"
+                                >
+                                  <a
+                                    className="item"
+                                    href="/signup"
+                                    onClick={[Function]}
+                                  >
+                                    Sign Up
+                                  </a>
+                                </Link>
+                              </MenuItem>
+                              <MenuItem
+                                as={[Function]}
+                                name="log in"
+                                to="/login"
+                              >
+                                <Link
+                                  className="item"
+                                  onClick={[Function]}
+                                  to="/login"
+                                >
+                                  <a
+                                    className="item"
+                                    href="/login"
+                                    onClick={[Function]}
+                                  >
+                                    Log In
+                                  </a>
+                                </Link>
+                              </MenuItem>
+                            </div>
+                          </MenuMenu>
+                        </Responsive>
+                        <Responsive
+                          as={[Function]}
+                          getWidth={[Function]}
+                          maxWidth={768}
+                          position="right"
+                        />
+                      </div>
+                    </Container>
+                  </div>
+                </Menu>
+              </div>
+            </Segment>
+          </nav>
+        </Navbar>
+      </ConnectFunction>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;

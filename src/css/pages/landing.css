@@ -1,3 +1,17 @@
 .landing {
   text-align: center;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.landing .landing-header {
+  color: #ffffff;
+}
+
+.landing > * {
+  margin: 2.5rem 0;
 }

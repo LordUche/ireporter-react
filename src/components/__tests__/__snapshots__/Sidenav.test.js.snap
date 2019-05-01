@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidenav /> should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <MemoryRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "kq1ice",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "kq1ice",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <ConnectFunction
+        hideSidebar={[MockFunction]}
+        visible={true}
+      >
+        <Sidenav
+          hideSidebar={[MockFunction]}
+          loggedIn={false}
+          logout={[Function]}
+          visible={true}
+        >
+          <SidebarPushable
+            as={[Function]}
+          >
+            <Segment
+              className="pushable"
+            >
+              <div
+                className="ui segment pushable"
+              >
+                <Sidebar
+                  animation="uncover"
+                  as={[Function]}
+                  direction="right"
+                  icon="labeled"
+                  onHide={[MockFunction]}
+                  vertical={true}
+                  visible={true}
+                  width="thin"
+                >
+                  <Ref
+                    innerRef={
+                      Object {
+                        "current": <div
+                          class="ui vertical labeled icon ui uncover right thin visible sidebar menu"
+                        >
+                          <a
+                            class="item"
+                            href="/"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="home icon"
+                            />
+                            Home
+                          </a>
+                          <a
+                            class="item sidebar__login-button"
+                            href="/login"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="sign in icon"
+                            />
+                            Log In
+                          </a>
+                          <a
+                            class="item sidebar__signup-button"
+                            href="/signup"
+                          >
+                            <i
+                              aria-hidden="true"
+                              class="signup icon"
+                            />
+                            Sign Up
+                          </a>
+                        </div>,
+                      }
+                    }
+                  >
+                    <RefFindNode
+                      innerRef={
+                        Object {
+                          "current": <div
+                            class="ui vertical labeled icon ui uncover right thin visible sidebar menu"
+                          >
+                            <a
+                              class="item"
+                              href="/"
+                            >
+                              <i
+                                aria-hidden="true"
+                                class="home icon"
+                              />
+                              Home
+                            </a>
+                            <a
+                              class="item sidebar__login-button"
+                              href="/login"
+                            >
+                              <i
+                                aria-hidden="true"
+                                class="sign in icon"
+                              />
+                              Log In
+                            </a>
+                            <a
+                              class="item sidebar__signup-button"
+                              href="/signup"
+                            >
+                              <i
+                                aria-hidden="true"
+                                class="signup icon"
+                              />
+                              Sign Up
+                            </a>
+                          </div>,
+                        }
+                      }
+                    >
+                      <Menu
+                        className="ui uncover right thin visible sidebar"
+                        icon="labeled"
+                        vertical={true}
+                      >
+                        <div
+                          className="ui vertical labeled icon ui uncover right thin visible sidebar menu"
+                        >
+                          <MenuItem
+                            as={[Function]}
+                            onClick={[MockFunction]}
+                            to="/"
+                          >
+                            <Link
+                              className="item"
+                              onClick={[Function]}
+                              to="/"
+                            >
+                              <a
+                                className="item"
+                                href="/"
+                                onClick={[Function]}
+                              >
+                                <Icon
+                                  as="i"
+                                  name="home"
+                                >
+                                  <i
+                                    aria-hidden="true"
+                                    className="home icon"
+                                    onClick={[Function]}
+                                  />
+                                </Icon>
+                                Home
+                              </a>
+                            </Link>
+                          </MenuItem>
+                          <MenuItem
+                            as={[Function]}
+                            className="sidebar__login-button"
+                            onClick={[MockFunction]}
+                            to="/login"
+                          >
+                            <Link
+                              className="item sidebar__login-button"
+                              onClick={[Function]}
+                              to="/login"
+                            >
+                              <a
+                                className="item sidebar__login-button"
+                                href="/login"
+                                onClick={[Function]}
+                              >
+                                <Icon
+                                  as="i"
+                                  name="sign in"
+                                >
+                                  <i
+                                    aria-hidden="true"
+                                    className="sign in icon"
+                                    onClick={[Function]}
+                                  />
+                                </Icon>
+                                Log In
+                              </a>
+                            </Link>
+                          </MenuItem>
+                          <MenuItem
+                            as={[Function]}
+                            className="sidebar__signup-button"
+                            onClick={[MockFunction]}
+                            to="/signup"
+                          >
+                            <Link
+                              className="item sidebar__signup-button"
+                              onClick={[Function]}
+                              to="/signup"
+                            >
+                              <a
+                                className="item sidebar__signup-button"
+                                href="/signup"
+                                onClick={[Function]}
+                              >
+                                <Icon
+                                  as="i"
+                                  name="signup"
+                                >
+                                  <i
+                                    aria-hidden="true"
+                                    className="signup icon"
+                                    onClick={[Function]}
+                                  />
+                                </Icon>
+                                Sign Up
+                              </a>
+                            </Link>
+                          </MenuItem>
+                          <EventStack
+                            name="click"
+                            on={[Function]}
+                            pool="default"
+                            target="document"
+                          />
+                        </div>
+                      </Menu>
+                    </RefFindNode>
+                  </Ref>
+                </Sidebar>
+                <SidebarPusher>
+                  <div
+                    className="pusher"
+                  >
+                    <main>
+                      test
+                    </main>
+                  </div>
+                </SidebarPusher>
+              </div>
+            </Segment>
+          </SidebarPushable>
+        </Sidenav>
+      </ConnectFunction>
+    </Router>
+  </MemoryRouter>
+</Provider>
+`;
