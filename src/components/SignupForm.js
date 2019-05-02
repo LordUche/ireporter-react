@@ -45,7 +45,7 @@ class SignupForm extends React.Component {
 
     if (loggedIn) return <Redirect to="/profile" />;
     return (
-      <div ref={appRef} className="auth-form">
+      <div ref={appRef} className="auth__form card-form">
         <Card>
           <Card.Content>
             <Card.Header as="h1">Sign Up</Card.Header>

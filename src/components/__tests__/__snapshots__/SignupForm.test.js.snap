@@ -19,7 +19,7 @@ exports[`<SignupForm /> should match snapshot 1`] = `
       signUp={[Function]}
     >
       <div
-        className="auth-form"
+        className="auth__form card-form"
       >
         <Card>
           <div

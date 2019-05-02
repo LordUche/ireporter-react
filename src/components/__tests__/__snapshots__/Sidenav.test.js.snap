@@ -12,32 +12,20 @@ exports[`<Sidenav /> should match snapshot 1`] = `
     }
   }
 >
-  <MemoryRouter>
+  <BrowserRouter>
     <Router
       history={
         Object {
           "action": "POP",
           "block": [Function],
-          "canGo": [Function],
           "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "kq1ice",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
           "go": [Function],
           "goBack": [Function],
           "goForward": [Function],
-          "index": 0,
           "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "kq1ice",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -279,6 +267,6 @@ exports[`<Sidenav /> should match snapshot 1`] = `
         </Sidenav>
       </ConnectFunction>
     </Router>
-  </MemoryRouter>
+  </BrowserRouter>
 </Provider>
 `;

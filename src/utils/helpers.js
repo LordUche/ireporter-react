@@ -1,5 +1,6 @@
 import { toast } from 'react-toastify';
 import jwt from 'jsonwebtoken';
+import axios from 'axios';
 import { appRef } from './refs';
 
 export const showToast = (messages = [], type = 'info') => {
@@ -36,4 +37,26 @@ export const getCurrentUser = () => {
   } catch (error) {
     return null;
   }
+};
+
+export const uploadMedia = async data => {
+  const { Images, Videos } = data;
+  const uploads = [...Images, ...Videos].map(file => {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', process.env.UPLOAD_PRESET);
+    formData.append('timestamp', Date.now());
+
+    return axios.post(
+      `https://api.cloudinary.com/v1_1/${process.env.CLOUD_NAME}/upload`,
+      formData
+    );
+  });
+  const uploadResponse = uploads.length ? await axios.all(uploads) : [];
+  const media = uploadResponse.map(m => ({
+    url: m.data.secure_url,
+    type: m.data.resource_type,
+  }));
+  data.Images = media.filter(m => m.type === 'image').map(img => img.url);
+  data.Videos = media.filter(m => m.type === 'video').map(vid => vid.url);
 };

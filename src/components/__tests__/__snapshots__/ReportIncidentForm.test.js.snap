@@ -1,0 +1,822 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportIncidentForm /> should match snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <ConnectFunction>
+    <ReportIncidentForm
+      loading={false}
+      report={[Function]}
+    >
+      <div
+        className="report-incident__form card-form"
+      >
+        <Card>
+          <div
+            className="ui card"
+            onClick={[Function]}
+          >
+            <CardContent>
+              <div
+                className="content"
+              >
+                <CardHeader
+                  as="h1"
+                >
+                  <h1
+                    className="header"
+                  >
+                    Report an Incident
+                  </h1>
+                </CardHeader>
+                <Form
+                  as="form"
+                  encType="multipart/form-data"
+                  onSubmit={[Function]}
+                >
+                  <form
+                    className="ui form"
+                    encType="multipart/form-data"
+                    onSubmit={[Function]}
+                  >
+                    <FormSelect
+                      as={[Function]}
+                      control={[Function]}
+                      label="Type"
+                      name="type"
+                      onChange={[Function]}
+                      options={
+                        Array [
+                          Object {
+                            "icon": Object {
+                              "color": "red",
+                              "name": "flag",
+                            },
+                            "key": "red-flag",
+                            "text": "Red Flag",
+                            "value": "red-flag",
+                          },
+                          Object {
+                            "icon": Object {
+                              "color": "yellow",
+                              "name": "warning sign",
+                            },
+                            "key": "intervention",
+                            "text": "Intervention",
+                            "value": "intervention",
+                          },
+                        ]
+                      }
+                      placeholder="Choose type of incident..."
+                      required={true}
+                      selection={true}
+                      value=""
+                    >
+                      <FormField
+                        control={[Function]}
+                        label="Type"
+                        name="type"
+                        onChange={[Function]}
+                        options={
+                          Array [
+                            Object {
+                              "icon": Object {
+                                "color": "red",
+                                "name": "flag",
+                              },
+                              "key": "red-flag",
+                              "text": "Red Flag",
+                              "value": "red-flag",
+                            },
+                            Object {
+                              "icon": Object {
+                                "color": "yellow",
+                                "name": "warning sign",
+                              },
+                              "key": "intervention",
+                              "text": "Intervention",
+                              "value": "intervention",
+                            },
+                          ]
+                        }
+                        placeholder="Choose type of incident..."
+                        required={true}
+                        selection={true}
+                        value=""
+                      >
+                        <div
+                          className="required field"
+                        >
+                          <label>
+                            Type
+                          </label>
+                          <Select
+                            name="type"
+                            onChange={[Function]}
+                            options={
+                              Array [
+                                Object {
+                                  "icon": Object {
+                                    "color": "red",
+                                    "name": "flag",
+                                  },
+                                  "key": "red-flag",
+                                  "text": "Red Flag",
+                                  "value": "red-flag",
+                                },
+                                Object {
+                                  "icon": Object {
+                                    "color": "yellow",
+                                    "name": "warning sign",
+                                  },
+                                  "key": "intervention",
+                                  "text": "Intervention",
+                                  "value": "intervention",
+                                },
+                              ]
+                            }
+                            placeholder="Choose type of incident..."
+                            required={true}
+                            selection={true}
+                            value=""
+                          >
+                            <Dropdown
+                              additionLabel="Add "
+                              additionPosition="top"
+                              closeOnBlur={true}
+                              deburr={false}
+                              icon="dropdown"
+                              minCharacters={1}
+                              name="type"
+                              noResultsMessage="No results found."
+                              onChange={[Function]}
+                              openOnFocus={true}
+                              options={
+                                Array [
+                                  Object {
+                                    "icon": Object {
+                                      "color": "red",
+                                      "name": "flag",
+                                    },
+                                    "key": "red-flag",
+                                    "text": "Red Flag",
+                                    "value": "red-flag",
+                                  },
+                                  Object {
+                                    "icon": Object {
+                                      "color": "yellow",
+                                      "name": "warning sign",
+                                    },
+                                    "key": "intervention",
+                                    "text": "Intervention",
+                                    "value": "intervention",
+                                  },
+                                ]
+                              }
+                              placeholder="Choose type of incident..."
+                              renderLabel={[Function]}
+                              required={true}
+                              searchInput="text"
+                              selectOnBlur={true}
+                              selectOnNavigation={true}
+                              selection={true}
+                              value=""
+                              wrapSelection={true}
+                            >
+                              <Ref
+                                innerRef={
+                                  Object {
+                                    "current": <div
+                                      aria-expanded="false"
+                                      class="ui selection dropdown"
+                                      name="type"
+                                      required=""
+                                      role="listbox"
+                                      tabindex="0"
+                                    >
+                                      <div
+                                        aria-live="polite"
+                                        class="default text"
+                                        role="alert"
+                                      >
+                                        Choose type of incident...
+                                      </div>
+                                      <i
+                                        aria-hidden="true"
+                                        class="dropdown icon"
+                                      />
+                                      <div
+                                        class="menu transition"
+                                      >
+                                        <div
+                                          aria-checked="false"
+                                          aria-selected="true"
+                                          class="selected item"
+                                          role="option"
+                                          style="pointer-events: all;"
+                                        >
+                                          <i
+                                            aria-hidden="true"
+                                            class="red flag icon"
+                                          />
+                                          <span
+                                            class="text"
+                                          >
+                                            Red Flag
+                                          </span>
+                                        </div>
+                                        <div
+                                          aria-checked="false"
+                                          aria-selected="false"
+                                          class="item"
+                                          role="option"
+                                          style="pointer-events: all;"
+                                        >
+                                          <i
+                                            aria-hidden="true"
+                                            class="yellow warning sign icon"
+                                          />
+                                          <span
+                                            class="text"
+                                          >
+                                            Intervention
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </div>,
+                                  }
+                                }
+                              >
+                                <RefFindNode
+                                  innerRef={
+                                    Object {
+                                      "current": <div
+                                        aria-expanded="false"
+                                        class="ui selection dropdown"
+                                        name="type"
+                                        required=""
+                                        role="listbox"
+                                        tabindex="0"
+                                      >
+                                        <div
+                                          aria-live="polite"
+                                          class="default text"
+                                          role="alert"
+                                        >
+                                          Choose type of incident...
+                                        </div>
+                                        <i
+                                          aria-hidden="true"
+                                          class="dropdown icon"
+                                        />
+                                        <div
+                                          class="menu transition"
+                                        >
+                                          <div
+                                            aria-checked="false"
+                                            aria-selected="true"
+                                            class="selected item"
+                                            role="option"
+                                            style="pointer-events: all;"
+                                          >
+                                            <i
+                                              aria-hidden="true"
+                                              class="red flag icon"
+                                            />
+                                            <span
+                                              class="text"
+                                            >
+                                              Red Flag
+                                            </span>
+                                          </div>
+                                          <div
+                                            aria-checked="false"
+                                            aria-selected="false"
+                                            class="item"
+                                            role="option"
+                                            style="pointer-events: all;"
+                                          >
+                                            <i
+                                              aria-hidden="true"
+                                              class="yellow warning sign icon"
+                                            />
+                                            <span
+                                              class="text"
+                                            >
+                                              Intervention
+                                            </span>
+                                          </div>
+                                        </div>
+                                      </div>,
+                                    }
+                                  }
+                                >
+                                  <div
+                                    aria-expanded={false}
+                                    className="ui selection dropdown"
+                                    name="type"
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onClick={[Function]}
+                                    onFocus={[Function]}
+                                    onMouseDown={[Function]}
+                                    required={true}
+                                    role="listbox"
+                                    tabIndex={0}
+                                  >
+                                    <div
+                                      aria-live="polite"
+                                      className="default text"
+                                      role="alert"
+                                    >
+                                      Choose type of incident...
+                                    </div>
+                                    <Icon
+                                      as="i"
+                                      className=""
+                                      name="dropdown"
+                                      onClick={[Function]}
+                                    >
+                                      <i
+                                        aria-hidden="true"
+                                        className="dropdown icon"
+                                        onClick={[Function]}
+                                      />
+                                    </Icon>
+                                    <DropdownMenu>
+                                      <div
+                                        className="menu transition"
+                                      >
+                                        <DropdownItem
+                                          active={false}
+                                          icon={
+                                            Object {
+                                              "color": "red",
+                                              "name": "flag",
+                                            }
+                                          }
+                                          key="red-flag"
+                                          onClick={[Function]}
+                                          selected={true}
+                                          style={
+                                            Object {
+                                              "pointerEvents": "all",
+                                            }
+                                          }
+                                          text="Red Flag"
+                                          value="red-flag"
+                                        >
+                                          <div
+                                            aria-checked={false}
+                                            aria-selected={true}
+                                            className="selected item"
+                                            onClick={[Function]}
+                                            role="option"
+                                            style={
+                                              Object {
+                                                "pointerEvents": "all",
+                                              }
+                                            }
+                                          >
+                                            <Icon
+                                              as="i"
+                                              color="red"
+                                              name="flag"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                className="red flag icon"
+                                                onClick={[Function]}
+                                              />
+                                            </Icon>
+                                            <span
+                                              className="text"
+                                            >
+                                              Red Flag
+                                            </span>
+                                          </div>
+                                        </DropdownItem>
+                                        <DropdownItem
+                                          active={false}
+                                          icon={
+                                            Object {
+                                              "color": "yellow",
+                                              "name": "warning sign",
+                                            }
+                                          }
+                                          key="intervention"
+                                          onClick={[Function]}
+                                          selected={false}
+                                          style={
+                                            Object {
+                                              "pointerEvents": "all",
+                                            }
+                                          }
+                                          text="Intervention"
+                                          value="intervention"
+                                        >
+                                          <div
+                                            aria-checked={false}
+                                            aria-selected={false}
+                                            className="item"
+                                            onClick={[Function]}
+                                            role="option"
+                                            style={
+                                              Object {
+                                                "pointerEvents": "all",
+                                              }
+                                            }
+                                          >
+                                            <Icon
+                                              as="i"
+                                              color="yellow"
+                                              name="warning sign"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                className="yellow warning sign icon"
+                                                onClick={[Function]}
+                                              />
+                                            </Icon>
+                                            <span
+                                              className="text"
+                                            >
+                                              Intervention
+                                            </span>
+                                          </div>
+                                        </DropdownItem>
+                                      </div>
+                                    </DropdownMenu>
+                                  </div>
+                                </RefFindNode>
+                              </Ref>
+                            </Dropdown>
+                          </Select>
+                        </div>
+                      </FormField>
+                    </FormSelect>
+                    <FormInput
+                      as={[Function]}
+                      control={[Function]}
+                      fluid={true}
+                      icon="comment"
+                      iconPosition="left"
+                      label="Comment"
+                      name="comment"
+                      onChange={[Function]}
+                      placeholder="Short description of incident..."
+                      required={true}
+                      transparent={true}
+                      value=""
+                    >
+                      <FormField
+                        control={[Function]}
+                        fluid={true}
+                        icon="comment"
+                        iconPosition="left"
+                        label="Comment"
+                        name="comment"
+                        onChange={[Function]}
+                        placeholder="Short description of incident..."
+                        required={true}
+                        transparent={true}
+                        value=""
+                      >
+                        <div
+                          className="required field"
+                        >
+                          <label>
+                            Comment
+                          </label>
+                          <Input
+                            fluid={true}
+                            icon="comment"
+                            iconPosition="left"
+                            name="comment"
+                            onChange={[Function]}
+                            placeholder="Short description of incident..."
+                            required={true}
+                            transparent={true}
+                            type="text"
+                            value=""
+                          >
+                            <div
+                              className="ui fluid transparent left icon input"
+                            >
+                              <input
+                                name="comment"
+                                onChange={[Function]}
+                                placeholder="Short description of incident..."
+                                required={true}
+                                type="text"
+                                value=""
+                              />
+                              <Icon
+                                as="i"
+                                name="comment"
+                              >
+                                <i
+                                  aria-hidden="true"
+                                  className="comment icon"
+                                  onClick={[Function]}
+                                />
+                              </Icon>
+                            </div>
+                          </Input>
+                        </div>
+                      </FormField>
+                    </FormInput>
+                    <FormInput
+                      as={[Function]}
+                      control={[Function]}
+                      fluid={true}
+                      icon="marker"
+                      iconPosition="left"
+                      label="Location"
+                      name="location"
+                      onChange={[Function]}
+                      placeholder="latitude, longitude"
+                      required={true}
+                      transparent={true}
+                      value=""
+                    >
+                      <FormField
+                        control={[Function]}
+                        fluid={true}
+                        icon="marker"
+                        iconPosition="left"
+                        label="Location"
+                        name="location"
+                        onChange={[Function]}
+                        placeholder="latitude, longitude"
+                        required={true}
+                        transparent={true}
+                        value=""
+                      >
+                        <div
+                          className="required field"
+                        >
+                          <label>
+                            Location
+                          </label>
+                          <Input
+                            fluid={true}
+                            icon="marker"
+                            iconPosition="left"
+                            name="location"
+                            onChange={[Function]}
+                            placeholder="latitude, longitude"
+                            required={true}
+                            transparent={true}
+                            type="text"
+                            value=""
+                          >
+                            <div
+                              className="ui fluid transparent left icon input"
+                            >
+                              <input
+                                name="location"
+                                onChange={[Function]}
+                                placeholder="latitude, longitude"
+                                required={true}
+                                type="text"
+                                value=""
+                              />
+                              <Icon
+                                as="i"
+                                name="marker"
+                              >
+                                <i
+                                  aria-hidden="true"
+                                  className="marker icon"
+                                  onClick={[Function]}
+                                />
+                              </Icon>
+                            </div>
+                          </Input>
+                        </div>
+                      </FormField>
+                    </FormInput>
+                    <FormInput
+                      accept="image/*"
+                      as={[Function]}
+                      control={[Function]}
+                      fluid={true}
+                      icon="image"
+                      iconPosition="left"
+                      label="Images"
+                      multiple={true}
+                      name="Images"
+                      onChange={[Function]}
+                      transparent={true}
+                      type="file"
+                    >
+                      <FormField
+                        accept="image/*"
+                        control={[Function]}
+                        fluid={true}
+                        icon="image"
+                        iconPosition="left"
+                        label="Images"
+                        multiple={true}
+                        name="Images"
+                        onChange={[Function]}
+                        transparent={true}
+                        type="file"
+                      >
+                        <div
+                          className="field"
+                        >
+                          <label>
+                            Images
+                          </label>
+                          <Input
+                            accept="image/*"
+                            fluid={true}
+                            icon="image"
+                            iconPosition="left"
+                            multiple={true}
+                            name="Images"
+                            onChange={[Function]}
+                            transparent={true}
+                            type="file"
+                          >
+                            <div
+                              className="ui fluid transparent left icon input"
+                            >
+                              <input
+                                accept="image/*"
+                                multiple={true}
+                                name="Images"
+                                onChange={[Function]}
+                                type="file"
+                              />
+                              <Icon
+                                as="i"
+                                name="image"
+                              >
+                                <i
+                                  aria-hidden="true"
+                                  className="image icon"
+                                  onClick={[Function]}
+                                />
+                              </Icon>
+                            </div>
+                          </Input>
+                        </div>
+                      </FormField>
+                    </FormInput>
+                    <FormInput
+                      accept="video/*"
+                      as={[Function]}
+                      control={[Function]}
+                      fluid={true}
+                      icon="video"
+                      iconPosition="left"
+                      label="Videos"
+                      multiple={true}
+                      name="Videos"
+                      onChange={[Function]}
+                      transparent={true}
+                      type="file"
+                    >
+                      <FormField
+                        accept="video/*"
+                        control={[Function]}
+                        fluid={true}
+                        icon="video"
+                        iconPosition="left"
+                        label="Videos"
+                        multiple={true}
+                        name="Videos"
+                        onChange={[Function]}
+                        transparent={true}
+                        type="file"
+                      >
+                        <div
+                          className="field"
+                        >
+                          <label>
+                            Videos
+                          </label>
+                          <Input
+                            accept="video/*"
+                            fluid={true}
+                            icon="video"
+                            iconPosition="left"
+                            multiple={true}
+                            name="Videos"
+                            onChange={[Function]}
+                            transparent={true}
+                            type="file"
+                          >
+                            <div
+                              className="ui fluid transparent left icon input"
+                            >
+                              <input
+                                accept="video/*"
+                                multiple={true}
+                                name="Videos"
+                                onChange={[Function]}
+                                type="file"
+                              />
+                              <Icon
+                                as="i"
+                                name="video"
+                              >
+                                <i
+                                  aria-hidden="true"
+                                  className="video icon"
+                                  onClick={[Function]}
+                                />
+                              </Icon>
+                            </div>
+                          </Input>
+                        </div>
+                      </FormField>
+                    </FormInput>
+                    <FormButton
+                      as={[Function]}
+                      color="red"
+                      control={[Function]}
+                      disabled={false}
+                      fluid={true}
+                      loading={false}
+                      type="submit"
+                    >
+                      <FormField
+                        color="red"
+                        control={[Function]}
+                        disabled={false}
+                        fluid={true}
+                        loading={false}
+                        type="submit"
+                      >
+                        <div
+                          className="field"
+                        >
+                          <Button
+                            as="button"
+                            color="red"
+                            disabled={false}
+                            fluid={true}
+                            loading={false}
+                            type="submit"
+                          >
+                            <Ref
+                              innerRef={
+                                Object {
+                                  "current": <button
+                                    class="ui red fluid button"
+                                    type="submit"
+                                  >
+                                    Report Incident
+                                  </button>,
+                                }
+                              }
+                            >
+                              <RefFindNode
+                                innerRef={
+                                  Object {
+                                    "current": <button
+                                      class="ui red fluid button"
+                                      type="submit"
+                                    >
+                                      Report Incident
+                                    </button>,
+                                  }
+                                }
+                              >
+                                <button
+                                  className="ui red fluid button"
+                                  onClick={[Function]}
+                                  type="submit"
+                                >
+                                  Report Incident
+                                </button>
+                              </RefFindNode>
+                            </Ref>
+                          </Button>
+                        </div>
+                      </FormField>
+                    </FormButton>
+                  </form>
+                </Form>
+              </div>
+            </CardContent>
+          </div>
+        </Card>
+      </div>
+    </ReportIncidentForm>
+  </ConnectFunction>
+</Provider>
+`;

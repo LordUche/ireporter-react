@@ -1,22 +1,20 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { mount } from 'enzyme';
 import toJSON from 'enzyme-to-json';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Sidenav from '../Sidenav';
+import Profile from '../Profile';
 import store from '../../redux/store';
 import mockRouterOptions from '../../../test/__mocks__/mockRouter';
 
-describe('<Sidenav />', () => {
+describe('<Profile />', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = mount(
       <Provider store={store}>
         <Router>
-          <Sidenav visible hideSidebar={jest.fn()}>
-            test
-          </Sidenav>
+          <Profile />
         </Router>
       </Provider>,
       mockRouterOptions
