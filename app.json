@@ -4,7 +4,8 @@
   "env": {
     "NODE_ENV": { "required": true },
     "API_BASE_URL": { "required": true },
-    "CLOUDINARY_URL": { "required": true }
+    "CLOUD_NAME": { "required": true },
+    "UPLOAD_PRESET": { "required": true }
   },
   "formation": {},
   "name": "ireporter-react",

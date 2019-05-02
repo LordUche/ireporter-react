@@ -53,8 +53,12 @@ export const reportIncident = data => async dispatch => {
     handleMessages([message], 'success');
     dispatch(reportIncidentSuccessAction(incident));
   } catch (err) {
-    const { error, errors } = err.response.data;
-    const messages = errors || [error];
+    let messages = ['An error occurred'];
+
+    if (err.response) {
+      const { error, errors } = err.response.data;
+      messages = errors || [error];
+    }
     handleMessages(messages, 'error');
     dispatch(reportIncidentFailureAction(messages));
   }

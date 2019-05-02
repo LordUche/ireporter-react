@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import toJSON from 'enzyme-to-json';
 import { Provider } from 'react-redux';
-import { MemoryRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Sidenav from '../Sidenav';
 import store from '../../redux/store';
 import mockRouterOptions from '../../../test/__mocks__/mockRouter';

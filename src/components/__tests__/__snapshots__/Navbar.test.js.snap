@@ -12,32 +12,20 @@ exports[`<Navbar /> should match snapshot 1`] = `
     }
   }
 >
-  <MemoryRouter>
+  <BrowserRouter>
     <Router
       history={
         Object {
           "action": "POP",
           "block": [Function],
-          "canGo": [Function],
           "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "iupbkx",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
           "go": [Function],
           "goBack": [Function],
           "goForward": [Function],
-          "index": 0,
           "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "iupbkx",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -188,6 +176,6 @@ exports[`<Navbar /> should match snapshot 1`] = `
         </Navbar>
       </ConnectFunction>
     </Router>
-  </MemoryRouter>
+  </BrowserRouter>
 </Provider>
 `;

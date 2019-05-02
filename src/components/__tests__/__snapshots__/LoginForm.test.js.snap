@@ -19,7 +19,7 @@ exports[`<LoginForm /> should match snapshot 1`] = `
       loggedIn={false}
     >
       <div
-        className="auth-form"
+        className="auth__form card-form"
       >
         <Card>
           <div

@@ -47,7 +47,7 @@ export class ReportIncidentForm extends React.Component {
     ];
 
     return (
-      <div ref={appRef} className="report-incident__form">
+      <div ref={appRef} className="report-incident__form card-form">
         <Card>
           <Card.Content>
             <Card.Header as="h1">Report an Incident</Card.Header>

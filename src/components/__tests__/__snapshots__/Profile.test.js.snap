@@ -12,32 +12,20 @@ exports[`<Profile /> should match snapshot 1`] = `
     }
   }
 >
-  <MemoryRouter>
+  <BrowserRouter>
     <Router
       history={
         Object {
           "action": "POP",
           "block": [Function],
-          "canGo": [Function],
           "createHref": [Function],
-          "entries": Array [
-            Object {
-              "hash": "",
-              "key": "pvmwqu",
-              "pathname": "/",
-              "search": "",
-              "state": undefined,
-            },
-          ],
           "go": [Function],
           "goBack": [Function],
           "goForward": [Function],
-          "index": 0,
           "length": 1,
           "listen": [Function],
           "location": Object {
             "hash": "",
-            "key": "pvmwqu",
             "pathname": "/",
             "search": "",
             "state": undefined,
@@ -102,6 +90,6 @@ exports[`<Profile /> should match snapshot 1`] = `
         </div>
       </Profile>
     </Router>
-  </MemoryRouter>
+  </BrowserRouter>
 </Provider>
 `;
