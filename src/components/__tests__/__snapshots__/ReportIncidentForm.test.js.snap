@@ -51,6 +51,7 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                     <FormSelect
                       as={[Function]}
                       control={[Function]}
+                      label="Type"
                       name="type"
                       onChange={[Function]}
                       options={
@@ -82,6 +83,7 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                     >
                       <FormField
                         control={[Function]}
+                        label="Type"
                         name="type"
                         onChange={[Function]}
                         options={
@@ -114,6 +116,9 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                         <div
                           className="required field"
                         >
+                          <label>
+                            Type
+                          </label>
                           <Select
                             name="type"
                             onChange={[Function]}
@@ -465,9 +470,10 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                       fluid={true}
                       icon="comment"
                       iconPosition="left"
+                      label="Comment"
                       name="comment"
                       onChange={[Function]}
-                      placeholder="Comment"
+                      placeholder="Short description of incident..."
                       required={true}
                       transparent={true}
                       value=""
@@ -477,9 +483,10 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                         fluid={true}
                         icon="comment"
                         iconPosition="left"
+                        label="Comment"
                         name="comment"
                         onChange={[Function]}
-                        placeholder="Comment"
+                        placeholder="Short description of incident..."
                         required={true}
                         transparent={true}
                         value=""
@@ -487,13 +494,16 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                         <div
                           className="required field"
                         >
+                          <label>
+                            Comment
+                          </label>
                           <Input
                             fluid={true}
                             icon="comment"
                             iconPosition="left"
                             name="comment"
                             onChange={[Function]}
-                            placeholder="Comment"
+                            placeholder="Short description of incident..."
                             required={true}
                             transparent={true}
                             type="text"
@@ -505,7 +515,7 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                               <input
                                 name="comment"
                                 onChange={[Function]}
-                                placeholder="Comment"
+                                placeholder="Short description of incident..."
                                 required={true}
                                 type="text"
                                 value=""
@@ -531,9 +541,10 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                       fluid={true}
                       icon="marker"
                       iconPosition="left"
+                      label="Location"
                       name="location"
                       onChange={[Function]}
-                      placeholder="Location"
+                      placeholder="latitude, longitude"
                       required={true}
                       transparent={true}
                       value=""
@@ -543,9 +554,10 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                         fluid={true}
                         icon="marker"
                         iconPosition="left"
+                        label="Location"
                         name="location"
                         onChange={[Function]}
-                        placeholder="Location"
+                        placeholder="latitude, longitude"
                         required={true}
                         transparent={true}
                         value=""
@@ -553,13 +565,16 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                         <div
                           className="required field"
                         >
+                          <label>
+                            Location
+                          </label>
                           <Input
                             fluid={true}
                             icon="marker"
                             iconPosition="left"
                             name="location"
                             onChange={[Function]}
-                            placeholder="Location"
+                            placeholder="latitude, longitude"
                             required={true}
                             transparent={true}
                             type="text"
@@ -571,7 +586,7 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                               <input
                                 name="location"
                                 onChange={[Function]}
-                                placeholder="Location"
+                                placeholder="latitude, longitude"
                                 required={true}
                                 type="text"
                                 value=""

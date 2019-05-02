@@ -54,6 +54,7 @@ export class ReportIncidentForm extends React.Component {
             <Form encType="multipart/form-data" onSubmit={this.handleSubmit}>
               <Form.Select
                 selection
+                label="Type"
                 value={type}
                 name="type"
                 onChange={this.handleInputChange}
@@ -64,8 +65,9 @@ export class ReportIncidentForm extends React.Component {
               <Form.Input
                 icon="comment"
                 iconPosition="left"
-                placeholder="Comment"
+                placeholder="Short description of incident..."
                 fluid
+                label="Comment"
                 onChange={this.handleInputChange}
                 value={comment}
                 name="comment"
@@ -75,7 +77,8 @@ export class ReportIncidentForm extends React.Component {
               <Form.Input
                 icon="marker"
                 iconPosition="left"
-                placeholder="Location"
+                placeholder="latitude, longitude"
+                label="Location"
                 fluid
                 onChange={this.handleInputChange}
                 value={location}
