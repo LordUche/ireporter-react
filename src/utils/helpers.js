@@ -1,23 +1,21 @@
 import { toast } from 'react-toastify';
 import jwt from 'jsonwebtoken';
 import axios from 'axios';
-import { appRef } from './refs';
 
 export const showToast = (messages = [], type = 'info') => {
   messages.map(message => toast[type](message));
 };
 
 export const handleMessages = (messages = [], type = 'info') => {
-  appRef.current &&
-    appRef.current.dispatchEvent(
-      new CustomEvent('app-message', {
-        bubbles: true,
-        detail: {
-          messages,
-          type,
-        },
-      })
-    );
+  window.dispatchEvent(
+    new CustomEvent('app-message', {
+      bubbles: true,
+      detail: {
+        messages,
+        type,
+      },
+    })
+  );
 };
 
 export const sanitizeData = data =>

@@ -2,14 +2,16 @@ import React from 'react';
 import { Card, Form } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
-import { appRef } from '../utils/refs';
+import { Redirect, Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { authenticateUser } from '../redux/actions/auth';
+import { handleMessages } from '../utils/helpers';
 
 class LoginForm extends React.Component {
   state = { email: '', password: '' };
 
   handleInputChange = e => {
+    toast.dismiss();
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
@@ -22,11 +24,12 @@ class LoginForm extends React.Component {
 
   render() {
     const { email, password } = this.state;
-    const { loading, loggedIn } = this.props;
+    const { loading, loggedIn, errors } = this.props;
 
+    errors && handleMessages(errors, 'error');
     if (loggedIn) return <Redirect to="/profile" />;
     return (
-      <div ref={appRef} className="auth__form card-form">
+      <div className="auth__form card-form">
         <Card>
           <Card.Content>
             <Card.Header as="h1">Log In</Card.Header>
@@ -55,10 +58,19 @@ class LoginForm extends React.Component {
                 transparent
                 required
               />
-              <Form.Button loading={loading} type="submit" color="red" fluid>
+              <Form.Button
+                loading={loading}
+                disabled={loading}
+                type="submit"
+                color="red"
+                fluid
+              >
                 Log In
               </Form.Button>
             </Form>
+          </Card.Content>
+          <Card.Content as="p">
+            {`Don't have an account?`} <Link to="/signup">Sign up</Link>
           </Card.Content>
         </Card>
       </div>
@@ -66,15 +78,19 @@ class LoginForm extends React.Component {
   }
 }
 
+LoginForm.defaultProps = { errors: [] };
+
 LoginForm.propTypes = {
   logIn: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   loggedIn: PropTypes.bool.isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string),
 };
 
 const mapStateToProps = state => ({
   loading: state.auth.loading,
   loggedIn: state.auth.loggedIn,
+  errors: state.auth.errors,
 });
 
 export default connect(

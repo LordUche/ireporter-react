@@ -1,11 +1,11 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { Card, Form } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { africanCountries } from '../utils/country-names';
 import { authenticateUser } from '../redux/actions/auth';
-import { appRef } from '../utils/refs';
+import { sanitizeData, handleMessages } from '../utils/helpers';
 
 class SignupForm extends React.Component {
   state = {
@@ -27,7 +27,7 @@ class SignupForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const { signUp } = this.props;
-    signUp('signup', this.state);
+    signUp('signup', sanitizeData(this.state));
   };
 
   render() {
@@ -41,11 +41,12 @@ class SignupForm extends React.Component {
       email,
       password,
     } = this.state;
-    const { loading, loggedIn } = this.props;
+    const { loading, loggedIn, errors } = this.props;
 
+    errors && handleMessages(errors, 'error');
     if (loggedIn) return <Redirect to="/profile" />;
     return (
-      <div ref={appRef} className="auth__form card-form">
+      <div className="auth__form card-form">
         <Card>
           <Card.Content>
             <Card.Header as="h1">Sign Up</Card.Header>
@@ -149,10 +150,19 @@ class SignupForm extends React.Component {
                 transparent
                 required
               />
-              <Form.Button loading={loading} type="submit" color="red" fluid>
+              <Form.Button
+                loading={loading}
+                disabled={loading}
+                type="submit"
+                color="red"
+                fluid
+              >
                 Sign Up
               </Form.Button>
             </Form>
+          </Card.Content>
+          <Card.Content>
+            Already have an account? <Link to="/login">Log in</Link>
           </Card.Content>
         </Card>
       </div>
@@ -160,15 +170,19 @@ class SignupForm extends React.Component {
   }
 }
 
+SignupForm.defaultProps = { errors: [] };
+
 SignupForm.propTypes = {
   signUp: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   loggedIn: PropTypes.bool.isRequired,
+  errors: PropTypes.arrayOf(PropTypes.string),
 };
 
 const mapStateToProps = state => ({
   loading: state.auth.loading,
   loggedIn: state.auth.loggedIn,
+  errors: state.auth.errors,
 });
 
 export default connect(

@@ -12,72 +12,81 @@ exports[`<LoginForm /> should match snapshot 1`] = `
     }
   }
 >
-  <ConnectFunction>
-    <LoginForm
-      loading={false}
-      logIn={[Function]}
-      loggedIn={false}
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <div
-        className="auth__form card-form"
-      >
-        <Card>
+      <ConnectFunction>
+        <LoginForm
+          errors={Array []}
+          loading={false}
+          logIn={[Function]}
+          loggedIn={false}
+        >
           <div
-            className="ui card"
-            onClick={[Function]}
+            className="auth__form card-form"
           >
-            <CardContent>
+            <Card>
               <div
-                className="content"
+                className="ui card"
+                onClick={[Function]}
               >
-                <CardHeader
-                  as="h1"
-                >
-                  <h1
-                    className="header"
+                <CardContent>
+                  <div
+                    className="content"
                   >
-                    Log In
-                  </h1>
-                </CardHeader>
-                <Form
-                  as="form"
-                  onSubmit={[Function]}
-                >
-                  <form
-                    className="ui form"
-                    onSubmit={[Function]}
-                  >
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="at"
-                      iconPosition="left"
-                      name="email"
-                      onChange={[Function]}
-                      placeholder="Email"
-                      required={true}
-                      transparent={true}
-                      type="email"
-                      value=""
+                    <CardHeader
+                      as="h1"
                     >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="at"
-                        iconPosition="left"
-                        name="email"
-                        onChange={[Function]}
-                        placeholder="Email"
-                        required={true}
-                        transparent={true}
-                        type="email"
-                        value=""
+                      <h1
+                        className="header"
                       >
-                        <div
-                          className="required field"
+                        Log In
+                      </h1>
+                    </CardHeader>
+                    <Form
+                      as="form"
+                      onSubmit={[Function]}
+                    >
+                      <form
+                        className="ui form"
+                        onSubmit={[Function]}
+                      >
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="at"
+                          iconPosition="left"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="Email"
+                          required={true}
+                          transparent={true}
+                          type="email"
+                          value=""
                         >
-                          <Input
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="at"
                             iconPosition="left"
@@ -90,62 +99,62 @@ exports[`<LoginForm /> should match snapshot 1`] = `
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="at"
+                                iconPosition="left"
                                 name="email"
                                 onChange={[Function]}
                                 placeholder="Email"
                                 required={true}
+                                transparent={true}
                                 type="email"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="at"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="at icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="email"
+                                    onChange={[Function]}
+                                    placeholder="Email"
+                                    required={true}
+                                    type="email"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="at"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="at icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="lock"
-                      iconPosition="left"
-                      name="password"
-                      onChange={[Function]}
-                      placeholder="Password"
-                      required={true}
-                      transparent={true}
-                      type="password"
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="lock"
-                        iconPosition="left"
-                        name="password"
-                        onChange={[Function]}
-                        placeholder="Password"
-                        required={true}
-                        transparent={true}
-                        type="password"
-                        value=""
-                      >
-                        <div
-                          className="required field"
+                          </FormField>
+                        </FormInput>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="lock"
+                          iconPosition="left"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Password"
+                          required={true}
+                          transparent={true}
+                          type="password"
+                          value=""
                         >
-                          <Input
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="lock"
                             iconPosition="left"
@@ -158,101 +167,141 @@ exports[`<LoginForm /> should match snapshot 1`] = `
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="lock"
+                                iconPosition="left"
                                 name="password"
                                 onChange={[Function]}
                                 placeholder="Password"
                                 required={true}
+                                transparent={true}
                                 type="password"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="lock"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="lock icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="password"
+                                    onChange={[Function]}
+                                    placeholder="Password"
+                                    required={true}
+                                    type="password"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="lock"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="lock icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormButton
-                      as={[Function]}
-                      color="red"
-                      control={[Function]}
-                      fluid={true}
-                      loading={false}
-                      type="submit"
-                    >
-                      <FormField
-                        color="red"
-                        control={[Function]}
-                        fluid={true}
-                        loading={false}
-                        type="submit"
-                      >
-                        <div
-                          className="field"
+                          </FormField>
+                        </FormInput>
+                        <FormButton
+                          as={[Function]}
+                          color="red"
+                          control={[Function]}
+                          disabled={false}
+                          fluid={true}
+                          loading={false}
+                          type="submit"
                         >
-                          <Button
-                            as="button"
+                          <FormField
                             color="red"
+                            control={[Function]}
+                            disabled={false}
                             fluid={true}
                             loading={false}
                             type="submit"
                           >
-                            <Ref
-                              innerRef={
-                                Object {
-                                  "current": <button
-                                    class="ui red fluid button"
-                                    type="submit"
-                                  >
-                                    Log In
-                                  </button>,
-                                }
-                              }
+                            <div
+                              className="field"
                             >
-                              <RefFindNode
-                                innerRef={
-                                  Object {
-                                    "current": <button
-                                      class="ui red fluid button"
+                              <Button
+                                as="button"
+                                color="red"
+                                disabled={false}
+                                fluid={true}
+                                loading={false}
+                                type="submit"
+                              >
+                                <Ref
+                                  innerRef={
+                                    Object {
+                                      "current": <button
+                                        class="ui red fluid button"
+                                        type="submit"
+                                      >
+                                        Log In
+                                      </button>,
+                                    }
+                                  }
+                                >
+                                  <RefFindNode
+                                    innerRef={
+                                      Object {
+                                        "current": <button
+                                          class="ui red fluid button"
+                                          type="submit"
+                                        >
+                                          Log In
+                                        </button>,
+                                      }
+                                    }
+                                  >
+                                    <button
+                                      className="ui red fluid button"
+                                      onClick={[Function]}
                                       type="submit"
                                     >
                                       Log In
-                                    </button>,
-                                  }
-                                }
-                              >
-                                <button
-                                  className="ui red fluid button"
-                                  onClick={[Function]}
-                                  type="submit"
-                                >
-                                  Log In
-                                </button>
-                              </RefFindNode>
-                            </Ref>
-                          </Button>
-                        </div>
-                      </FormField>
-                    </FormButton>
-                  </form>
-                </Form>
+                                    </button>
+                                  </RefFindNode>
+                                </Ref>
+                              </Button>
+                            </div>
+                          </FormField>
+                        </FormButton>
+                      </form>
+                    </Form>
+                  </div>
+                </CardContent>
+                <CardContent
+                  as="p"
+                >
+                  <p
+                    className="content"
+                  >
+                    Don't have an account?
+                     
+                    <Link
+                      to="/signup"
+                    >
+                      <a
+                        href="/signup"
+                        onClick={[Function]}
+                      >
+                        Sign up
+                      </a>
+                    </Link>
+                  </p>
+                </CardContent>
               </div>
-            </CardContent>
+            </Card>
           </div>
-        </Card>
-      </div>
-    </LoginForm>
-  </ConnectFunction>
+        </LoginForm>
+      </ConnectFunction>
+    </Router>
+  </BrowserRouter>
 </Provider>
 `;

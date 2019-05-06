@@ -13,9 +13,9 @@ import { currentUser } from '../redux/actions/auth';
 export class App extends React.Component {
   state = { sidebarOpen: false };
 
-  componentDidMount() {
+  async componentDidMount() {
     const { getCurrentUser } = this.props;
-    getCurrentUser();
+    await getCurrentUser();
     window.addEventListener('app-message', e =>
       showToast(e.detail.messages, e.detail.type)
     );

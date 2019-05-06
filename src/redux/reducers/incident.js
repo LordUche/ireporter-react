@@ -1,34 +1,35 @@
-import {
-  REPORT_INCIDENT_REQUEST,
-  REPORT_INCIDENT_SUCCESS,
-  REPORT_INCIDENT_FAILURE,
-} from '../actions/incident';
+import * as types from '../actions/types';
 
 const initialState = {
   id: null,
   type: '',
   comment: '',
   location: '',
-  Images: [],
-  Videos: [],
+  images: [],
+  videos: [],
   loading: false,
   created: false,
 };
 
 const incidentReducer = (state = initialState, action) => {
   switch (action.type) {
-    case REPORT_INCIDENT_REQUEST:
+    case types.INCIDENTS_REQUEST:
       return { ...state, loading: true };
 
-    case REPORT_INCIDENT_SUCCESS:
-      return { ...state, ...action.payload, loading: false, created: true };
-
-    case REPORT_INCIDENT_FAILURE:
+    case types.INCIDENTS_SUCCESS:
       return {
         ...state,
-        errors: action.payload,
+        ...action.payload,
         loading: false,
-        created: false,
+        created: true,
+        errors: null,
+      };
+
+    case types.INCIDENTS_FAILURE:
+      return {
+        ...state,
+        ...initialState,
+        errors: action.payload,
       };
 
     default:
