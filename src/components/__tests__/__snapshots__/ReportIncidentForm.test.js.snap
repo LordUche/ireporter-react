@@ -14,8 +14,9 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
 >
   <ConnectFunction>
     <ReportIncidentForm
+      created={false}
       loading={false}
-      report={[Function]}
+      reportIncident={[Function]}
     >
       <div
         className="report-incident__form card-form"

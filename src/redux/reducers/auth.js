@@ -3,7 +3,7 @@ import {
   AUTH_SUCCESS,
   AUTH_FAILURE,
   LOGOUT,
-} from '../actions/auth';
+} from '../actions/types';
 
 const initialState = {
   loggedIn: false,
@@ -18,7 +18,13 @@ const authReducer = (state = initialState, action) => {
       return { ...state, loading: true };
 
     case AUTH_SUCCESS:
-      return { ...state, user: action.payload, loading: false, loggedIn: true };
+      return {
+        ...state,
+        user: action.payload,
+        loading: false,
+        loggedIn: true,
+        errors: null,
+      };
 
     case AUTH_FAILURE:
       return {

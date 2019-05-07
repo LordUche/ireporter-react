@@ -12,79 +12,88 @@ exports[`<SignupForm /> should match snapshot 1`] = `
     }
   }
 >
-  <ConnectFunction>
-    <SignupForm
-      loading={false}
-      loggedIn={false}
-      signUp={[Function]}
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
     >
-      <div
-        className="auth__form card-form"
-      >
-        <Card>
+      <ConnectFunction>
+        <SignUpForm
+          loading={false}
+          loggedIn={false}
+          signUp={[Function]}
+        >
           <div
-            className="ui card"
-            onClick={[Function]}
+            className="auth__form card-form"
           >
-            <CardContent>
+            <Card>
               <div
-                className="content"
+                className="ui card"
+                onClick={[Function]}
               >
-                <CardHeader
-                  as="h1"
-                >
-                  <h1
-                    className="header"
-                  >
-                    Sign Up
-                  </h1>
-                </CardHeader>
-                <Form
-                  as="form"
-                  onSubmit={[Function]}
-                >
-                  <form
-                    className="ui form"
-                    onSubmit={[Function]}
+                <CardContent>
+                  <div
+                    className="content"
                   >
                     <CardHeader
-                      as="h5"
+                      as="h1"
                     >
-                      <h5
+                      <h1
                         className="header"
                       >
-                        Personal Info
-                      </h5>
+                        Sign Up
+                      </h1>
                     </CardHeader>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="user"
-                      iconPosition="left"
-                      name="firstname"
-                      onChange={[Function]}
-                      placeholder="First name"
-                      required={true}
-                      transparent={true}
-                      value=""
+                    <Form
+                      as="form"
+                      onSubmit={[Function]}
                     >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="user"
-                        iconPosition="left"
-                        name="firstname"
-                        onChange={[Function]}
-                        placeholder="First name"
-                        required={true}
-                        transparent={true}
-                        value=""
+                      <form
+                        className="ui form"
+                        onSubmit={[Function]}
                       >
-                        <div
-                          className="required field"
+                        <CardHeader
+                          as="h5"
                         >
-                          <Input
+                          <h5
+                            className="header"
+                          >
+                            Personal Info
+                          </h5>
+                        </CardHeader>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="user"
+                          iconPosition="left"
+                          name="firstname"
+                          onChange={[Function]}
+                          placeholder="First name"
+                          required={true}
+                          transparent={true}
+                          value=""
+                        >
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="user"
                             iconPosition="left"
@@ -93,64 +102,64 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             placeholder="First name"
                             required={true}
                             transparent={true}
-                            type="text"
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="user"
+                                iconPosition="left"
                                 name="firstname"
                                 onChange={[Function]}
                                 placeholder="First name"
                                 required={true}
+                                transparent={true}
                                 type="text"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="user"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="user icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="firstname"
+                                    onChange={[Function]}
+                                    placeholder="First name"
+                                    required={true}
+                                    type="text"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="user"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="user icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="user"
-                      iconPosition="left"
-                      name="lastname"
-                      onChange={[Function]}
-                      placeholder="Last name"
-                      required={true}
-                      transparent={true}
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="user"
-                        iconPosition="left"
-                        name="lastname"
-                        onChange={[Function]}
-                        placeholder="Last name"
-                        required={true}
-                        transparent={true}
-                        value=""
-                      >
-                        <div
-                          className="required field"
+                          </FormField>
+                        </FormInput>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="user"
+                          iconPosition="left"
+                          name="lastname"
+                          onChange={[Function]}
+                          placeholder="Last name"
+                          required={true}
+                          transparent={true}
+                          value=""
                         >
-                          <Input
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="user"
                             iconPosition="left"
@@ -159,62 +168,63 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             placeholder="Last name"
                             required={true}
                             transparent={true}
-                            type="text"
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="user"
+                                iconPosition="left"
                                 name="lastname"
                                 onChange={[Function]}
                                 placeholder="Last name"
                                 required={true}
+                                transparent={true}
                                 type="text"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="user"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="user icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="lastname"
+                                    onChange={[Function]}
+                                    placeholder="Last name"
+                                    required={true}
+                                    type="text"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="user"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="user icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="user"
-                      iconPosition="left"
-                      name="othernames"
-                      onChange={[Function]}
-                      placeholder="Other names"
-                      transparent={true}
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="user"
-                        iconPosition="left"
-                        name="othernames"
-                        onChange={[Function]}
-                        placeholder="Other names"
-                        transparent={true}
-                        value=""
-                      >
-                        <div
-                          className="field"
+                          </FormField>
+                        </FormInput>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="user"
+                          iconPosition="left"
+                          name="othernames"
+                          onChange={[Function]}
+                          placeholder="Other names"
+                          transparent={true}
+                          value=""
                         >
-                          <Input
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="user"
                             iconPosition="left"
@@ -222,63 +232,62 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             onChange={[Function]}
                             placeholder="Other names"
                             transparent={true}
-                            type="text"
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="user"
+                                iconPosition="left"
                                 name="othernames"
                                 onChange={[Function]}
                                 placeholder="Other names"
+                                transparent={true}
                                 type="text"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="user"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="user icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="othernames"
+                                    onChange={[Function]}
+                                    placeholder="Other names"
+                                    type="text"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="user"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="user icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="globe"
-                      iconPosition="left"
-                      list="countries"
-                      name="country"
-                      onChange={[Function]}
-                      placeholder="Choose country..."
-                      transparent={true}
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="globe"
-                        iconPosition="left"
-                        list="countries"
-                        name="country"
-                        onChange={[Function]}
-                        placeholder="Choose country..."
-                        transparent={true}
-                        value=""
-                      >
-                        <div
-                          className="field"
+                          </FormField>
+                        </FormInput>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="globe"
+                          iconPosition="left"
+                          list="countries"
+                          name="country"
+                          onChange={[Function]}
+                          placeholder="Choose country..."
+                          transparent={true}
+                          value=""
                         >
-                          <Input
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="globe"
                             iconPosition="left"
@@ -287,416 +296,416 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             onChange={[Function]}
                             placeholder="Choose country..."
                             transparent={true}
-                            type="text"
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="globe"
+                                iconPosition="left"
                                 list="countries"
                                 name="country"
                                 onChange={[Function]}
                                 placeholder="Choose country..."
+                                transparent={true}
                                 type="text"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="globe"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="globe icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    list="countries"
+                                    name="country"
+                                    onChange={[Function]}
+                                    placeholder="Choose country..."
+                                    type="text"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="globe"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="globe icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <datalist
-                      id="countries"
-                    >
-                      <option
-                        key="DZ"
-                        value="DZ"
-                      >
-                        Algeria (213)
-                      </option>
-                      <option
-                        key="AO"
-                        value="AO"
-                      >
-                        Angola (244)
-                      </option>
-                      <option
-                        key="BJ"
-                        value="BJ"
-                      >
-                        Benin (229)
-                      </option>
-                      <option
-                        key="BW"
-                        value="BW"
-                      >
-                        Botswana (267)
-                      </option>
-                      <option
-                        key="BF"
-                        value="BF"
-                      >
-                        Burkina Faso (226)
-                      </option>
-                      <option
-                        key="BI"
-                        value="BI"
-                      >
-                        Burundi (257)
-                      </option>
-                      <option
-                        key="CM"
-                        value="CM"
-                      >
-                        Cameroon (237)
-                      </option>
-                      <option
-                        key="CV"
-                        value="CV"
-                      >
-                        Cape Verde (238)
-                      </option>
-                      <option
-                        key="CF"
-                        value="CF"
-                      >
-                        Central African Republic (236)
-                      </option>
-                      <option
-                        key="TD"
-                        value="TD"
-                      >
-                        Chad (235)
-                      </option>
-                      <option
-                        key="KM"
-                        value="KM"
-                      >
-                        Comoros (269)
-                      </option>
-                      <option
-                        key="CD"
-                        value="CD"
-                      >
-                        Democratic Republic of the Congo (243)
-                      </option>
-                      <option
-                        key="DJ"
-                        value="DJ"
-                      >
-                        Djibouti (253)
-                      </option>
-                      <option
-                        key="EG"
-                        value="EG"
-                      >
-                        Egypt (20)
-                      </option>
-                      <option
-                        key="GQ"
-                        value="GQ"
-                      >
-                        Equatorial Guinea (240)
-                      </option>
-                      <option
-                        key="ER"
-                        value="ER"
-                      >
-                        Eritrea (291)
-                      </option>
-                      <option
-                        key="ET"
-                        value="ET"
-                      >
-                        Ethiopia (251)
-                      </option>
-                      <option
-                        key="GA"
-                        value="GA"
-                      >
-                        Gabon (241)
-                      </option>
-                      <option
-                        key="GM"
-                        value="GM"
-                      >
-                        Gambia (220)
-                      </option>
-                      <option
-                        key="GH"
-                        value="GH"
-                      >
-                        Ghana (233)
-                      </option>
-                      <option
-                        key="GN"
-                        value="GN"
-                      >
-                        Guinea (224)
-                      </option>
-                      <option
-                        key="GW"
-                        value="GW"
-                      >
-                        Guinea-Bissau (245)
-                      </option>
-                      <option
-                        key="CI"
-                        value="CI"
-                      >
-                        Ivory Coast (225)
-                      </option>
-                      <option
-                        key="KE"
-                        value="KE"
-                      >
-                        Kenya (254)
-                      </option>
-                      <option
-                        key="LS"
-                        value="LS"
-                      >
-                        Lesotho (266)
-                      </option>
-                      <option
-                        key="LR"
-                        value="LR"
-                      >
-                        Liberia (231)
-                      </option>
-                      <option
-                        key="LY"
-                        value="LY"
-                      >
-                        Libya (218)
-                      </option>
-                      <option
-                        key="MG"
-                        value="MG"
-                      >
-                        Madagascar (261)
-                      </option>
-                      <option
-                        key="MW"
-                        value="MW"
-                      >
-                        Malawi (265)
-                      </option>
-                      <option
-                        key="ML"
-                        value="ML"
-                      >
-                        Mali (223)
-                      </option>
-                      <option
-                        key="MR"
-                        value="MR"
-                      >
-                        Mauritania (222)
-                      </option>
-                      <option
-                        key="MU"
-                        value="MU"
-                      >
-                        Mauritius (230)
-                      </option>
-                      <option
-                        key="YT"
-                        value="YT"
-                      >
-                        Mayotte (262)
-                      </option>
-                      <option
-                        key="MA"
-                        value="MA"
-                      >
-                        Morocco (212)
-                      </option>
-                      <option
-                        key="MZ"
-                        value="MZ"
-                      >
-                        Mozambique (258)
-                      </option>
-                      <option
-                        key="NA"
-                        value="NA"
-                      >
-                        Namibia (264)
-                      </option>
-                      <option
-                        key="NE"
-                        value="NE"
-                      >
-                        Niger (227)
-                      </option>
-                      <option
-                        key="NG"
-                        value="NG"
-                      >
-                        Nigeria (234)
-                      </option>
-                      <option
-                        key="CG"
-                        value="CG"
-                      >
-                        Republic of the Congo (242)
-                      </option>
-                      <option
-                        key="RE"
-                        value="RE"
-                      >
-                        Reunion (262)
-                      </option>
-                      <option
-                        key="RW"
-                        value="RW"
-                      >
-                        Rwanda (250)
-                      </option>
-                      <option
-                        key="SH"
-                        value="SH"
-                      >
-                        Saint Helena (290)
-                      </option>
-                      <option
-                        key="ST"
-                        value="ST"
-                      >
-                        Sao Tome and Principe (239)
-                      </option>
-                      <option
-                        key="SN"
-                        value="SN"
-                      >
-                        Senegal (221)
-                      </option>
-                      <option
-                        key="SC"
-                        value="SC"
-                      >
-                        Seychelles (248)
-                      </option>
-                      <option
-                        key="SL"
-                        value="SL"
-                      >
-                        Sierra Leone (232)
-                      </option>
-                      <option
-                        key="SO"
-                        value="SO"
-                      >
-                        Somalia (252)
-                      </option>
-                      <option
-                        key="ZA"
-                        value="ZA"
-                      >
-                        South Africa (27)
-                      </option>
-                      <option
-                        key="SS"
-                        value="SS"
-                      >
-                        South Sudan (211)
-                      </option>
-                      <option
-                        key="SD"
-                        value="SD"
-                      >
-                        Sudan (249)
-                      </option>
-                      <option
-                        key="SZ"
-                        value="SZ"
-                      >
-                        Swaziland (268)
-                      </option>
-                      <option
-                        key="TZ"
-                        value="TZ"
-                      >
-                        Tanzania (255)
-                      </option>
-                      <option
-                        key="TG"
-                        value="TG"
-                      >
-                        Togo (228)
-                      </option>
-                      <option
-                        key="TN"
-                        value="TN"
-                      >
-                        Tunisia (216)
-                      </option>
-                      <option
-                        key="UG"
-                        value="UG"
-                      >
-                        Uganda (256)
-                      </option>
-                      <option
-                        key="EH"
-                        value="EH"
-                      >
-                        Western Sahara (212)
-                      </option>
-                      <option
-                        key="ZM"
-                        value="ZM"
-                      >
-                        Zambia (260)
-                      </option>
-                      <option
-                        key="ZW"
-                        value="ZW"
-                      >
-                        Zimbabwe (263)
-                      </option>
-                    </datalist>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="phone"
-                      iconPosition="left"
-                      name="phonenumber"
-                      onChange={[Function]}
-                      placeholder="Phone number"
-                      transparent={true}
-                      type="tel"
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="phone"
-                        iconPosition="left"
-                        name="phonenumber"
-                        onChange={[Function]}
-                        placeholder="Phone number"
-                        transparent={true}
-                        type="tel"
-                        value=""
-                      >
-                        <div
-                          className="field"
+                          </FormField>
+                        </FormInput>
+                        <datalist
+                          id="countries"
                         >
-                          <Input
+                          <option
+                            key="DZ"
+                            value="DZ"
+                          >
+                            Algeria (213)
+                          </option>
+                          <option
+                            key="AO"
+                            value="AO"
+                          >
+                            Angola (244)
+                          </option>
+                          <option
+                            key="BJ"
+                            value="BJ"
+                          >
+                            Benin (229)
+                          </option>
+                          <option
+                            key="BW"
+                            value="BW"
+                          >
+                            Botswana (267)
+                          </option>
+                          <option
+                            key="BF"
+                            value="BF"
+                          >
+                            Burkina Faso (226)
+                          </option>
+                          <option
+                            key="BI"
+                            value="BI"
+                          >
+                            Burundi (257)
+                          </option>
+                          <option
+                            key="CM"
+                            value="CM"
+                          >
+                            Cameroon (237)
+                          </option>
+                          <option
+                            key="CV"
+                            value="CV"
+                          >
+                            Cape Verde (238)
+                          </option>
+                          <option
+                            key="CF"
+                            value="CF"
+                          >
+                            Central African Republic (236)
+                          </option>
+                          <option
+                            key="TD"
+                            value="TD"
+                          >
+                            Chad (235)
+                          </option>
+                          <option
+                            key="KM"
+                            value="KM"
+                          >
+                            Comoros (269)
+                          </option>
+                          <option
+                            key="CD"
+                            value="CD"
+                          >
+                            Democratic Republic of the Congo (243)
+                          </option>
+                          <option
+                            key="DJ"
+                            value="DJ"
+                          >
+                            Djibouti (253)
+                          </option>
+                          <option
+                            key="EG"
+                            value="EG"
+                          >
+                            Egypt (20)
+                          </option>
+                          <option
+                            key="GQ"
+                            value="GQ"
+                          >
+                            Equatorial Guinea (240)
+                          </option>
+                          <option
+                            key="ER"
+                            value="ER"
+                          >
+                            Eritrea (291)
+                          </option>
+                          <option
+                            key="ET"
+                            value="ET"
+                          >
+                            Ethiopia (251)
+                          </option>
+                          <option
+                            key="GA"
+                            value="GA"
+                          >
+                            Gabon (241)
+                          </option>
+                          <option
+                            key="GM"
+                            value="GM"
+                          >
+                            Gambia (220)
+                          </option>
+                          <option
+                            key="GH"
+                            value="GH"
+                          >
+                            Ghana (233)
+                          </option>
+                          <option
+                            key="GN"
+                            value="GN"
+                          >
+                            Guinea (224)
+                          </option>
+                          <option
+                            key="GW"
+                            value="GW"
+                          >
+                            Guinea-Bissau (245)
+                          </option>
+                          <option
+                            key="CI"
+                            value="CI"
+                          >
+                            Ivory Coast (225)
+                          </option>
+                          <option
+                            key="KE"
+                            value="KE"
+                          >
+                            Kenya (254)
+                          </option>
+                          <option
+                            key="LS"
+                            value="LS"
+                          >
+                            Lesotho (266)
+                          </option>
+                          <option
+                            key="LR"
+                            value="LR"
+                          >
+                            Liberia (231)
+                          </option>
+                          <option
+                            key="LY"
+                            value="LY"
+                          >
+                            Libya (218)
+                          </option>
+                          <option
+                            key="MG"
+                            value="MG"
+                          >
+                            Madagascar (261)
+                          </option>
+                          <option
+                            key="MW"
+                            value="MW"
+                          >
+                            Malawi (265)
+                          </option>
+                          <option
+                            key="ML"
+                            value="ML"
+                          >
+                            Mali (223)
+                          </option>
+                          <option
+                            key="MR"
+                            value="MR"
+                          >
+                            Mauritania (222)
+                          </option>
+                          <option
+                            key="MU"
+                            value="MU"
+                          >
+                            Mauritius (230)
+                          </option>
+                          <option
+                            key="YT"
+                            value="YT"
+                          >
+                            Mayotte (262)
+                          </option>
+                          <option
+                            key="MA"
+                            value="MA"
+                          >
+                            Morocco (212)
+                          </option>
+                          <option
+                            key="MZ"
+                            value="MZ"
+                          >
+                            Mozambique (258)
+                          </option>
+                          <option
+                            key="NA"
+                            value="NA"
+                          >
+                            Namibia (264)
+                          </option>
+                          <option
+                            key="NE"
+                            value="NE"
+                          >
+                            Niger (227)
+                          </option>
+                          <option
+                            key="NG"
+                            value="NG"
+                          >
+                            Nigeria (234)
+                          </option>
+                          <option
+                            key="CG"
+                            value="CG"
+                          >
+                            Republic of the Congo (242)
+                          </option>
+                          <option
+                            key="RE"
+                            value="RE"
+                          >
+                            Reunion (262)
+                          </option>
+                          <option
+                            key="RW"
+                            value="RW"
+                          >
+                            Rwanda (250)
+                          </option>
+                          <option
+                            key="SH"
+                            value="SH"
+                          >
+                            Saint Helena (290)
+                          </option>
+                          <option
+                            key="ST"
+                            value="ST"
+                          >
+                            Sao Tome and Principe (239)
+                          </option>
+                          <option
+                            key="SN"
+                            value="SN"
+                          >
+                            Senegal (221)
+                          </option>
+                          <option
+                            key="SC"
+                            value="SC"
+                          >
+                            Seychelles (248)
+                          </option>
+                          <option
+                            key="SL"
+                            value="SL"
+                          >
+                            Sierra Leone (232)
+                          </option>
+                          <option
+                            key="SO"
+                            value="SO"
+                          >
+                            Somalia (252)
+                          </option>
+                          <option
+                            key="ZA"
+                            value="ZA"
+                          >
+                            South Africa (27)
+                          </option>
+                          <option
+                            key="SS"
+                            value="SS"
+                          >
+                            South Sudan (211)
+                          </option>
+                          <option
+                            key="SD"
+                            value="SD"
+                          >
+                            Sudan (249)
+                          </option>
+                          <option
+                            key="SZ"
+                            value="SZ"
+                          >
+                            Swaziland (268)
+                          </option>
+                          <option
+                            key="TZ"
+                            value="TZ"
+                          >
+                            Tanzania (255)
+                          </option>
+                          <option
+                            key="TG"
+                            value="TG"
+                          >
+                            Togo (228)
+                          </option>
+                          <option
+                            key="TN"
+                            value="TN"
+                          >
+                            Tunisia (216)
+                          </option>
+                          <option
+                            key="UG"
+                            value="UG"
+                          >
+                            Uganda (256)
+                          </option>
+                          <option
+                            key="EH"
+                            value="EH"
+                          >
+                            Western Sahara (212)
+                          </option>
+                          <option
+                            key="ZM"
+                            value="ZM"
+                          >
+                            Zambia (260)
+                          </option>
+                          <option
+                            key="ZW"
+                            value="ZW"
+                          >
+                            Zimbabwe (263)
+                          </option>
+                        </datalist>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="phone"
+                          iconPosition="left"
+                          name="phonenumber"
+                          onChange={[Function]}
+                          placeholder="Phone number"
+                          transparent={true}
+                          type="tel"
+                          value=""
+                        >
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="phone"
                             iconPosition="left"
@@ -708,70 +717,69 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="phone"
+                                iconPosition="left"
                                 name="phonenumber"
                                 onChange={[Function]}
                                 placeholder="Phone number"
+                                transparent={true}
                                 type="tel"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="phone"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="phone icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="phonenumber"
+                                    onChange={[Function]}
+                                    placeholder="Phone number"
+                                    type="tel"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="phone"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="phone icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <CardHeader
-                      as="h5"
-                    >
-                      <h5
-                        className="header"
-                      >
-                        Account Info
-                      </h5>
-                    </CardHeader>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="user circle"
-                      iconPosition="left"
-                      name="username"
-                      onChange={[Function]}
-                      placeholder="Username"
-                      required={true}
-                      transparent={true}
-                      type="tel"
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="user circle"
-                        iconPosition="left"
-                        name="username"
-                        onChange={[Function]}
-                        placeholder="Username"
-                        required={true}
-                        transparent={true}
-                        type="tel"
-                        value=""
-                      >
-                        <div
-                          className="required field"
+                          </FormField>
+                        </FormInput>
+                        <CardHeader
+                          as="h5"
                         >
-                          <Input
+                          <h5
+                            className="header"
+                          >
+                            Account Info
+                          </h5>
+                        </CardHeader>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="user circle"
+                          iconPosition="left"
+                          name="username"
+                          onChange={[Function]}
+                          placeholder="Username"
+                          required={true}
+                          transparent={true}
+                          type="tel"
+                          value=""
+                        >
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="user circle"
                             iconPosition="left"
@@ -784,62 +792,62 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="user circle"
+                                iconPosition="left"
                                 name="username"
                                 onChange={[Function]}
                                 placeholder="Username"
                                 required={true}
+                                transparent={true}
                                 type="tel"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="user circle"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="user circle icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="username"
+                                    onChange={[Function]}
+                                    placeholder="Username"
+                                    required={true}
+                                    type="tel"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="user circle"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="user circle icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="at"
-                      iconPosition="left"
-                      name="email"
-                      onChange={[Function]}
-                      placeholder="Email"
-                      required={true}
-                      transparent={true}
-                      type="email"
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="at"
-                        iconPosition="left"
-                        name="email"
-                        onChange={[Function]}
-                        placeholder="Email"
-                        required={true}
-                        transparent={true}
-                        type="email"
-                        value=""
-                      >
-                        <div
-                          className="required field"
+                          </FormField>
+                        </FormInput>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="at"
+                          iconPosition="left"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="Email"
+                          required={true}
+                          transparent={true}
+                          type="email"
+                          value=""
                         >
-                          <Input
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="at"
                             iconPosition="left"
@@ -852,62 +860,62 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="at"
+                                iconPosition="left"
                                 name="email"
                                 onChange={[Function]}
                                 placeholder="Email"
                                 required={true}
+                                transparent={true}
                                 type="email"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="at"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="at icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="email"
+                                    onChange={[Function]}
+                                    placeholder="Email"
+                                    required={true}
+                                    type="email"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="at"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="at icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="lock"
-                      iconPosition="left"
-                      name="password"
-                      onChange={[Function]}
-                      placeholder="Password"
-                      required={true}
-                      transparent={true}
-                      type="password"
-                      value=""
-                    >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="lock"
-                        iconPosition="left"
-                        name="password"
-                        onChange={[Function]}
-                        placeholder="Password"
-                        required={true}
-                        transparent={true}
-                        type="password"
-                        value=""
-                      >
-                        <div
-                          className="required field"
+                          </FormField>
+                        </FormInput>
+                        <FormInput
+                          as={[Function]}
+                          control={[Function]}
+                          fluid={true}
+                          icon="lock"
+                          iconPosition="left"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Password"
+                          required={true}
+                          transparent={true}
+                          type="password"
+                          value=""
                         >
-                          <Input
+                          <FormField
+                            control={[Function]}
                             fluid={true}
                             icon="lock"
                             iconPosition="left"
@@ -920,101 +928,138 @@ exports[`<SignupForm /> should match snapshot 1`] = `
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field"
                             >
-                              <input
+                              <Input
+                                fluid={true}
+                                icon="lock"
+                                iconPosition="left"
                                 name="password"
                                 onChange={[Function]}
                                 placeholder="Password"
                                 required={true}
+                                transparent={true}
                                 type="password"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="lock"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="lock icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    name="password"
+                                    onChange={[Function]}
+                                    placeholder="Password"
+                                    required={true}
+                                    type="password"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="lock"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="lock icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
-                    <FormButton
-                      as={[Function]}
-                      color="red"
-                      control={[Function]}
-                      fluid={true}
-                      loading={false}
-                      type="submit"
-                    >
-                      <FormField
-                        color="red"
-                        control={[Function]}
-                        fluid={true}
-                        loading={false}
-                        type="submit"
-                      >
-                        <div
-                          className="field"
+                          </FormField>
+                        </FormInput>
+                        <FormButton
+                          as={[Function]}
+                          color="red"
+                          control={[Function]}
+                          disabled={false}
+                          fluid={true}
+                          loading={false}
+                          type="submit"
                         >
-                          <Button
-                            as="button"
+                          <FormField
                             color="red"
+                            control={[Function]}
+                            disabled={false}
                             fluid={true}
                             loading={false}
                             type="submit"
                           >
-                            <Ref
-                              innerRef={
-                                Object {
-                                  "current": <button
-                                    class="ui red fluid button"
-                                    type="submit"
-                                  >
-                                    Sign Up
-                                  </button>,
-                                }
-                              }
+                            <div
+                              className="field"
                             >
-                              <RefFindNode
-                                innerRef={
-                                  Object {
-                                    "current": <button
-                                      class="ui red fluid button"
+                              <Button
+                                as="button"
+                                color="red"
+                                disabled={false}
+                                fluid={true}
+                                loading={false}
+                                type="submit"
+                              >
+                                <Ref
+                                  innerRef={
+                                    Object {
+                                      "current": <button
+                                        class="ui red fluid button"
+                                        type="submit"
+                                      >
+                                        Sign Up
+                                      </button>,
+                                    }
+                                  }
+                                >
+                                  <RefFindNode
+                                    innerRef={
+                                      Object {
+                                        "current": <button
+                                          class="ui red fluid button"
+                                          type="submit"
+                                        >
+                                          Sign Up
+                                        </button>,
+                                      }
+                                    }
+                                  >
+                                    <button
+                                      className="ui red fluid button"
+                                      onClick={[Function]}
                                       type="submit"
                                     >
                                       Sign Up
-                                    </button>,
-                                  }
-                                }
-                              >
-                                <button
-                                  className="ui red fluid button"
-                                  onClick={[Function]}
-                                  type="submit"
-                                >
-                                  Sign Up
-                                </button>
-                              </RefFindNode>
-                            </Ref>
-                          </Button>
-                        </div>
-                      </FormField>
-                    </FormButton>
-                  </form>
-                </Form>
+                                    </button>
+                                  </RefFindNode>
+                                </Ref>
+                              </Button>
+                            </div>
+                          </FormField>
+                        </FormButton>
+                      </form>
+                    </Form>
+                  </div>
+                </CardContent>
+                <CardContent>
+                  <div
+                    className="content"
+                  >
+                    Already have an account? 
+                    <Link
+                      to="/login"
+                    >
+                      <a
+                        href="/login"
+                        onClick={[Function]}
+                      >
+                        Log in
+                      </a>
+                    </Link>
+                  </div>
+                </CardContent>
               </div>
-            </CardContent>
+            </Card>
           </div>
-        </Card>
-      </div>
-    </SignupForm>
-  </ConnectFunction>
+        </SignUpForm>
+      </ConnectFunction>
+    </Router>
+  </BrowserRouter>
 </Provider>
 `;

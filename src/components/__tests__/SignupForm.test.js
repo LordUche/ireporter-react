@@ -1,9 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { mount } from 'enzyme';
 import toJSON from 'enzyme-to-json';
 import { Provider } from 'react-redux';
 import SignupForm from '../SignupForm';
 import store from '../../redux/store';
+import mockRouterOptions from '../../../test/__mocks__/mockRouter';
 
 describe('<SignupForm />', () => {
   let wrapper;
@@ -11,8 +13,11 @@ describe('<SignupForm />', () => {
   beforeEach(() => {
     wrapper = mount(
       <Provider store={store}>
-        <SignupForm />
-      </Provider>
+        <Router>
+          <SignupForm />
+        </Router>
+      </Provider>,
+      mockRouterOptions
     );
   });
 

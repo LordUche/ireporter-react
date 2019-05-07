@@ -1,9 +1,10 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { Form, Card } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { appRef } from '../utils/refs';
-import { reportIncident } from '../redux/actions/incident';
+import { report } from '../redux/actions/incidents';
+import { handleMessages } from '../utils/helpers';
 
 export class ReportIncidentForm extends React.Component {
   state = {
@@ -24,13 +25,16 @@ export class ReportIncidentForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { report } = this.props;
-    report(this.state);
+    const { reportIncident } = this.props;
+    const { type } = this.state;
+    if (!type) handleMessages(['Please select a type of incident'], 'error');
+    else reportIncident(this.state);
   };
 
   render() {
     const { type, comment, location } = this.state;
-    const { loading } = this.props;
+    const { loading, created, id } = this.props;
+    if (created) return <Redirect to={`/incidents/${id}`} />;
     const typeOptions = [
       {
         key: 'red-flag',
@@ -45,9 +49,8 @@ export class ReportIncidentForm extends React.Component {
         icon: { name: 'warning sign', color: 'yellow' },
       },
     ];
-
     return (
-      <div ref={appRef} className="report-incident__form card-form">
+      <div className="report-incident__form card-form">
         <Card>
           <Card.Content>
             <Card.Header as="h1">Report an Incident</Card.Header>
@@ -126,16 +129,23 @@ export class ReportIncidentForm extends React.Component {
     );
   }
 }
+
+ReportIncidentForm.defaultProps = { id: undefined };
+
 ReportIncidentForm.propTypes = {
-  report: PropTypes.func.isRequired,
+  reportIncident: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
+  created: PropTypes.bool.isRequired,
+  id: PropTypes.number,
 };
 
 const mapStateToProps = state => ({
-  loading: state.incident.loading,
+  loading: state.incidents.loading,
+  created: state.incidents.created,
+  id: state.incidents.id,
 });
 
 export default connect(
   mapStateToProps,
-  { report: reportIncident }
+  { reportIncident: report }
 )(ReportIncidentForm);

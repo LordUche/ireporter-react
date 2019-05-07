@@ -1,13 +1,13 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { Card, Form } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { africanCountries } from '../utils/country-names';
 import { authenticateUser } from '../redux/actions/auth';
-import { appRef } from '../utils/refs';
+import { sanitizeData } from '../utils/helpers';
 
-class SignupForm extends React.Component {
+class SignUpForm extends React.Component {
   state = {
     firstname: '',
     lastname: '',
@@ -27,7 +27,7 @@ class SignupForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     const { signUp } = this.props;
-    signUp('signup', this.state);
+    signUp('signup', sanitizeData(this.state));
   };
 
   render() {
@@ -42,10 +42,9 @@ class SignupForm extends React.Component {
       password,
     } = this.state;
     const { loading, loggedIn } = this.props;
-
     if (loggedIn) return <Redirect to="/profile" />;
     return (
-      <div ref={appRef} className="auth__form card-form">
+      <div className="auth__form card-form">
         <Card>
           <Card.Content>
             <Card.Header as="h1">Sign Up</Card.Header>
@@ -149,10 +148,19 @@ class SignupForm extends React.Component {
                 transparent
                 required
               />
-              <Form.Button loading={loading} type="submit" color="red" fluid>
+              <Form.Button
+                loading={loading}
+                disabled={loading}
+                type="submit"
+                color="red"
+                fluid
+              >
                 Sign Up
               </Form.Button>
             </Form>
+          </Card.Content>
+          <Card.Content>
+            Already have an account? <Link to="/login">Log in</Link>
           </Card.Content>
         </Card>
       </div>
@@ -160,7 +168,9 @@ class SignupForm extends React.Component {
   }
 }
 
-SignupForm.propTypes = {
+SignUpForm.defaultProps = {};
+
+SignUpForm.propTypes = {
   signUp: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   loggedIn: PropTypes.bool.isRequired,
@@ -174,4 +184,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { signUp: authenticateUser }
-)(SignupForm);
+)(SignUpForm);

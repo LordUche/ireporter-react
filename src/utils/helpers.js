@@ -1,23 +1,21 @@
 import { toast } from 'react-toastify';
 import jwt from 'jsonwebtoken';
 import axios from 'axios';
-import { appRef } from './refs';
 
 export const showToast = (messages = [], type = 'info') => {
   messages.map(message => toast[type](message));
 };
 
 export const handleMessages = (messages = [], type = 'info') => {
-  appRef.current &&
-    appRef.current.dispatchEvent(
-      new CustomEvent('app-message', {
-        bubbles: true,
-        detail: {
-          messages,
-          type,
-        },
-      })
-    );
+  window.dispatchEvent(
+    new CustomEvent('app-message', {
+      bubbles: true,
+      detail: {
+        messages,
+        type,
+      },
+    })
+  );
 };
 
 export const sanitizeData = data =>
@@ -38,6 +36,22 @@ export const getCurrentUser = () => {
     return null;
   }
 };
+
+export const getIncidentStats = (incidents = [], status = '') =>
+  incidents.reduce((acc, i) => (i.status === status ? acc + 1 : acc), 0);
+
+export const getErrorMessages = err => {
+  let messages;
+  if (err.response) {
+    const { error, errors } = err.response.data;
+    messages = errors || [error];
+  } else messages = ['An error occurred'];
+  handleMessages(messages, 'error');
+  return messages;
+};
+
+export const mapKeys = array =>
+  array.reduce((acc, i) => ({ ...acc, [i.id]: i }), {});
 
 export const uploadMedia = async data => {
   const { Images, Videos } = data;
