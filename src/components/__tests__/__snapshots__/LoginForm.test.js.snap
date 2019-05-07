@@ -37,7 +37,6 @@ exports[`<LoginForm /> should match snapshot 1`] = `
     >
       <ConnectFunction>
         <LoginForm
-          errors={Array []}
           loading={false}
           logIn={[Function]}
           loggedIn={false}

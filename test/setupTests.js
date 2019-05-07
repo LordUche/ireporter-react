@@ -12,4 +12,26 @@ import 'regenerator-runtime/runtime';
 enzyme.configure({ adapter: new Adapter() });
 jest.mock('axios');
 const middleware = [thunk];
+const localStorageMock = (() => {
+  let store = {};
+  return {
+    getItem: jest.fn(key => {
+      return store[key] || null;
+    }),
+    setItem: jest.fn((key, value) => {
+      store[key] = value.toString();
+    }),
+    removeItem: jest.fn(key => {
+      delete store[key];
+    }),
+    clear: jest.fn(() => {
+      store = {};
+    }),
+  };
+})();
+
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock,
+});
+
 export const mockStore = configureMockStore(middleware);

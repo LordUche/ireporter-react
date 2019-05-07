@@ -25,6 +25,7 @@ module.exports = {
     'src/**/*.{js,jsx}',
     '!**/node_modules/**',
     '!src/index.{js,jsx}',
+    '!src/components/ProtectedRoute.{js,jsx}',
   ],
 
   // The directory where Jest should output its coverage files

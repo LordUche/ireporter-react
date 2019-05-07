@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { africanCountries } from '../utils/country-names';
 import { authenticateUser } from '../redux/actions/auth';
-import { sanitizeData, handleMessages } from '../utils/helpers';
+import { sanitizeData } from '../utils/helpers';
 
-class SignupForm extends React.Component {
+class SignUpForm extends React.Component {
   state = {
     firstname: '',
     lastname: '',
@@ -41,9 +41,7 @@ class SignupForm extends React.Component {
       email,
       password,
     } = this.state;
-    const { loading, loggedIn, errors } = this.props;
-
-    errors && handleMessages(errors, 'error');
+    const { loading, loggedIn } = this.props;
     if (loggedIn) return <Redirect to="/profile" />;
     return (
       <div className="auth__form card-form">
@@ -170,22 +168,20 @@ class SignupForm extends React.Component {
   }
 }
 
-SignupForm.defaultProps = { errors: [] };
+SignUpForm.defaultProps = {};
 
-SignupForm.propTypes = {
+SignUpForm.propTypes = {
   signUp: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   loggedIn: PropTypes.bool.isRequired,
-  errors: PropTypes.arrayOf(PropTypes.string),
 };
 
 const mapStateToProps = state => ({
   loading: state.auth.loading,
   loggedIn: state.auth.loggedIn,
-  errors: state.auth.errors,
 });
 
 export default connect(
   mapStateToProps,
   { signUp: authenticateUser }
-)(SignupForm);
+)(SignUpForm);

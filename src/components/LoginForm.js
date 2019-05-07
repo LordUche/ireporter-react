@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { Redirect, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { authenticateUser } from '../redux/actions/auth';
-import { handleMessages } from '../utils/helpers';
 
 class LoginForm extends React.Component {
   state = { email: '', password: '' };
@@ -24,9 +23,7 @@ class LoginForm extends React.Component {
 
   render() {
     const { email, password } = this.state;
-    const { loading, loggedIn, errors } = this.props;
-
-    errors && handleMessages(errors, 'error');
+    const { loading, loggedIn } = this.props;
     if (loggedIn) return <Redirect to="/profile" />;
     return (
       <div className="auth__form card-form">
@@ -78,19 +75,17 @@ class LoginForm extends React.Component {
   }
 }
 
-LoginForm.defaultProps = { errors: [] };
+LoginForm.defaultProps = {};
 
 LoginForm.propTypes = {
   logIn: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
   loggedIn: PropTypes.bool.isRequired,
-  errors: PropTypes.arrayOf(PropTypes.string),
 };
 
 const mapStateToProps = state => ({
   loading: state.auth.loading,
   loggedIn: state.auth.loggedIn,
-  errors: state.auth.errors,
 });
 
 export default connect(

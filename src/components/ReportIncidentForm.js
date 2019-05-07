@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { Form, Card } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -24,15 +25,16 @@ export class ReportIncidentForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { reportIncident, history } = this.props;
+    const { reportIncident } = this.props;
     const { type } = this.state;
     if (!type) handleMessages(['Please select a type of incident'], 'error');
-    else reportIncident(this.state, history);
+    else reportIncident(this.state);
   };
 
   render() {
     const { type, comment, location } = this.state;
-    const { loading } = this.props;
+    const { loading, created, id } = this.props;
+    if (created) return <Redirect to={`/incidents/${id}`} />;
     const typeOptions = [
       {
         key: 'red-flag',
@@ -128,20 +130,19 @@ export class ReportIncidentForm extends React.Component {
   }
 }
 
-ReportIncidentForm.defaultProps = { history: {} };
+ReportIncidentForm.defaultProps = { id: undefined };
 
 ReportIncidentForm.propTypes = {
   reportIncident: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func,
-  }),
+  created: PropTypes.bool.isRequired,
+  id: PropTypes.number,
 };
 
 const mapStateToProps = state => ({
-  loading: state.incident.loading,
-  created: state.incident.created,
-  id: state.incident.id,
+  loading: state.incidents.loading,
+  created: state.incidents.created,
+  id: state.incidents.id,
 });
 
 export default connect(

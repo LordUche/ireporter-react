@@ -43,7 +43,11 @@ export class App extends React.Component {
             </Container>
           </Sidenav>
         </Router>
-        <ToastContainer />
+        <ToastContainer
+          pauseOnFocusLoss={false}
+          pauseOnHover={false}
+          position="bottom-left"
+        />
       </Fragment>
     );
   }

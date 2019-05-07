@@ -37,6 +37,22 @@ export const getCurrentUser = () => {
   }
 };
 
+export const getIncidentStats = (incidents = [], status = '') =>
+  incidents.reduce((acc, i) => (i.status === status ? acc + 1 : acc), 0);
+
+export const getErrorMessages = err => {
+  let messages;
+  if (err.response) {
+    const { error, errors } = err.response.data;
+    messages = errors || [error];
+  } else messages = ['An error occurred'];
+  handleMessages(messages, 'error');
+  return messages;
+};
+
+export const mapKeys = array =>
+  array.reduce((acc, i) => ({ ...acc, [i.id]: i }), {});
+
 export const uploadMedia = async data => {
   const { Images, Videos } = data;
   const uploads = [...Images, ...Videos].map(file => {

@@ -36,8 +36,7 @@ exports[`<SignupForm /> should match snapshot 1`] = `
       }
     >
       <ConnectFunction>
-        <SignupForm
-          errors={Array []}
+        <SignUpForm
           loading={false}
           loggedIn={false}
           signUp={[Function]}
@@ -1058,7 +1057,7 @@ exports[`<SignupForm /> should match snapshot 1`] = `
               </div>
             </Card>
           </div>
-        </SignupForm>
+        </SignUpForm>
       </ConnectFunction>
     </Router>
   </BrowserRouter>

@@ -15,8 +15,6 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
   <ConnectFunction>
     <ReportIncidentForm
       created={false}
-      history={Object {}}
-      id={null}
       loading={false}
       reportIncident={[Function]}
     >

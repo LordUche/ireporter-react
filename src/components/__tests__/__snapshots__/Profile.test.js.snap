@@ -4,11 +4,12 @@ exports[`<Profile /> should match snapshot 1`] = `
 <Provider
   store={
     Object {
+      "clearActions": [Function],
       "dispatch": [Function],
+      "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],
       "subscribe": [Function],
-      Symbol(observable): [Function],
     }
   }
 >
@@ -37,13 +38,37 @@ exports[`<Profile /> should match snapshot 1`] = `
     >
       <ConnectFunction>
         <Profile
-          errors={Array []}
-          getAllInterventions={[Function]}
-          getAllRedFlags={[Function]}
-          interventions={Array []}
-          loggedIn={false}
-          redFlags={Array []}
-          user={Object {}}
+          deleteOne={[Function]}
+          fetchIncidents={[Function]}
+          incidents={
+            Array [
+              Object {
+                "comment": "Adipisci accusantium placeat aperiam porro.",
+                "location": "1, 2",
+                "type": "red-flag",
+              },
+              Object {
+                "comment": "Qui atque sapiente sunt voluptatem ipsam qui minus alias.",
+                "location": "1, 2",
+                "type": "red-flag",
+              },
+              Object {
+                "comment": "Ea nostrum iure facere laboriosam eum reiciendis aspernatur excepturi.",
+                "location": "1, 2",
+                "type": "red-flag",
+              },
+            ]
+          }
+          loading={false}
+          user={
+            Object {
+              "email": "Orlo.Hansen16@yahoo.com",
+              "firstname": "Anya",
+              "lastname": "Nitzsche",
+              "phonenumber": "953.392.7493",
+              "username": "Cortez_Schiller",
+            }
+          }
         >
           <div
             className="profile card-form"
@@ -91,7 +116,7 @@ exports[`<Profile /> should match snapshot 1`] = `
                       <div
                         className="header"
                       >
-                        undefined  undefined
+                        Anya  Nitzsche
                       </div>
                     </CardHeader>
                     <CardMeta>
@@ -99,17 +124,22 @@ exports[`<Profile /> should match snapshot 1`] = `
                         className="meta"
                       >
                         @
+                        Cortez_Schiller
                       </div>
                     </CardMeta>
                     <CardMeta>
                       <div
                         className="meta"
-                      />
+                      >
+                        953.392.7493
+                      </div>
                     </CardMeta>
                     <CardMeta>
                       <div
                         className="meta"
-                      />
+                      >
+                        Orlo.Hansen16@yahoo.com
+                      </div>
                     </CardMeta>
                   </div>
                 </CardContent>
@@ -249,84 +279,6 @@ exports[`<Profile /> should match snapshot 1`] = `
                         </RefFindNode>
                       </Ref>
                     </Button>
-                    <ButtonGroup>
-                      <div
-                        className="ui buttons"
-                      >
-                        <Button
-                          as="button"
-                          color="pink"
-                          onClick={[Function]}
-                        >
-                          <Ref
-                            innerRef={
-                              Object {
-                                "current": <button
-                                  class="ui pink button"
-                                >
-                                  Red-flags
-                                </button>,
-                              }
-                            }
-                          >
-                            <RefFindNode
-                              innerRef={
-                                Object {
-                                  "current": <button
-                                    class="ui pink button"
-                                  >
-                                    Red-flags
-                                  </button>,
-                                }
-                              }
-                            >
-                              <button
-                                className="ui pink button"
-                                onClick={[Function]}
-                              >
-                                Red-flags
-                              </button>
-                            </RefFindNode>
-                          </Ref>
-                        </Button>
-                        <Button
-                          as="button"
-                          color="orange"
-                          onClick={[Function]}
-                        >
-                          <Ref
-                            innerRef={
-                              Object {
-                                "current": <button
-                                  class="ui orange button"
-                                >
-                                  Interventions
-                                </button>,
-                              }
-                            }
-                          >
-                            <RefFindNode
-                              innerRef={
-                                Object {
-                                  "current": <button
-                                    class="ui orange button"
-                                  >
-                                    Interventions
-                                  </button>,
-                                }
-                              }
-                            >
-                              <button
-                                className="ui orange button"
-                                onClick={[Function]}
-                              >
-                                Interventions
-                              </button>
-                            </RefFindNode>
-                          </Ref>
-                        </Button>
-                      </div>
-                    </ButtonGroup>
                   </div>
                 </CardContent>
                 <CardContent>
@@ -398,18 +350,22 @@ exports[`<Profile /> should match snapshot 1`] = `
                                 </TableHeaderCell>
                                 <TableHeaderCell
                                   as="th"
-                                  colSpan="2"
                                 >
                                   <TableCell
                                     as="th"
                                     className=""
-                                    colSpan="2"
                                   >
                                     <th
                                       className=""
-                                      colSpan="2"
                                     >
                                       Actions
+                                      <Loader
+                                        active={false}
+                                      >
+                                        <div
+                                          className="ui loader"
+                                        />
+                                      </Loader>
                                     </th>
                                   </TableCell>
                                 </TableHeaderCell>
@@ -422,7 +378,509 @@ exports[`<Profile /> should match snapshot 1`] = `
                         >
                           <tbody
                             className=""
-                          />
+                          >
+                            <TableRow
+                              as="tr"
+                              cellAs="td"
+                            >
+                              <tr
+                                className=""
+                              >
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    Adipisci accusantium placeat aperiam porro.
+                                  </td>
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    red-flag
+                                  </td>
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  />
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    <Button
+                                      as={[Function]}
+                                      color="black"
+                                      content="VIEW"
+                                      icon="eye"
+                                      to="/incidents/undefined"
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <a
+                                              class="ui black button"
+                                              href="/incidents/undefined"
+                                              role="button"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="eye icon"
+                                              />
+                                              VIEW
+                                            </a>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <a
+                                                class="ui black button"
+                                                href="/incidents/undefined"
+                                                role="button"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  class="eye icon"
+                                                />
+                                                VIEW
+                                              </a>,
+                                            }
+                                          }
+                                        >
+                                          <Link
+                                            className="ui black button"
+                                            onClick={[Function]}
+                                            role="button"
+                                            to="/incidents/undefined"
+                                          >
+                                            <a
+                                              className="ui black button"
+                                              href="/incidents/undefined"
+                                              onClick={[Function]}
+                                              role="button"
+                                            >
+                                              <Icon
+                                                as="i"
+                                                name="eye"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="eye icon"
+                                                  onClick={[Function]}
+                                                />
+                                              </Icon>
+                                              VIEW
+                                            </a>
+                                          </Link>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </Button>
+                                    <Button
+                                      as="button"
+                                      color="red"
+                                      content="DELETE"
+                                      icon="trash alternate outline"
+                                      onClick={[Function]}
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <button
+                                              class="ui red button"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="trash alternate outline icon"
+                                              />
+                                              DELETE
+                                            </button>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <button
+                                                class="ui red button"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  class="trash alternate outline icon"
+                                                />
+                                                DELETE
+                                              </button>,
+                                            }
+                                          }
+                                        >
+                                          <button
+                                            className="ui red button"
+                                            onClick={[Function]}
+                                          >
+                                            <Icon
+                                              as="i"
+                                              name="trash alternate outline"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                className="trash alternate outline icon"
+                                                onClick={[Function]}
+                                              />
+                                            </Icon>
+                                            DELETE
+                                          </button>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </Button>
+                                  </td>
+                                </TableCell>
+                              </tr>
+                            </TableRow>
+                            <TableRow
+                              as="tr"
+                              cellAs="td"
+                            >
+                              <tr
+                                className=""
+                              >
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    Qui atque sapiente sunt voluptatem ipsam qui minus alias.
+                                  </td>
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    red-flag
+                                  </td>
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  />
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    <Button
+                                      as={[Function]}
+                                      color="black"
+                                      content="VIEW"
+                                      icon="eye"
+                                      to="/incidents/undefined"
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <a
+                                              class="ui black button"
+                                              href="/incidents/undefined"
+                                              role="button"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="eye icon"
+                                              />
+                                              VIEW
+                                            </a>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <a
+                                                class="ui black button"
+                                                href="/incidents/undefined"
+                                                role="button"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  class="eye icon"
+                                                />
+                                                VIEW
+                                              </a>,
+                                            }
+                                          }
+                                        >
+                                          <Link
+                                            className="ui black button"
+                                            onClick={[Function]}
+                                            role="button"
+                                            to="/incidents/undefined"
+                                          >
+                                            <a
+                                              className="ui black button"
+                                              href="/incidents/undefined"
+                                              onClick={[Function]}
+                                              role="button"
+                                            >
+                                              <Icon
+                                                as="i"
+                                                name="eye"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="eye icon"
+                                                  onClick={[Function]}
+                                                />
+                                              </Icon>
+                                              VIEW
+                                            </a>
+                                          </Link>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </Button>
+                                    <Button
+                                      as="button"
+                                      color="red"
+                                      content="DELETE"
+                                      icon="trash alternate outline"
+                                      onClick={[Function]}
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <button
+                                              class="ui red button"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="trash alternate outline icon"
+                                              />
+                                              DELETE
+                                            </button>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <button
+                                                class="ui red button"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  class="trash alternate outline icon"
+                                                />
+                                                DELETE
+                                              </button>,
+                                            }
+                                          }
+                                        >
+                                          <button
+                                            className="ui red button"
+                                            onClick={[Function]}
+                                          >
+                                            <Icon
+                                              as="i"
+                                              name="trash alternate outline"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                className="trash alternate outline icon"
+                                                onClick={[Function]}
+                                              />
+                                            </Icon>
+                                            DELETE
+                                          </button>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </Button>
+                                  </td>
+                                </TableCell>
+                              </tr>
+                            </TableRow>
+                            <TableRow
+                              as="tr"
+                              cellAs="td"
+                            >
+                              <tr
+                                className=""
+                              >
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    Ea nostrum iure facere laboriosam eum reiciendis aspernatur excepturi.
+                                  </td>
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    red-flag
+                                  </td>
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  />
+                                </TableCell>
+                                <TableCell
+                                  as="td"
+                                >
+                                  <td
+                                    className=""
+                                  >
+                                    <Button
+                                      as={[Function]}
+                                      color="black"
+                                      content="VIEW"
+                                      icon="eye"
+                                      to="/incidents/undefined"
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <a
+                                              class="ui black button"
+                                              href="/incidents/undefined"
+                                              role="button"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="eye icon"
+                                              />
+                                              VIEW
+                                            </a>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <a
+                                                class="ui black button"
+                                                href="/incidents/undefined"
+                                                role="button"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  class="eye icon"
+                                                />
+                                                VIEW
+                                              </a>,
+                                            }
+                                          }
+                                        >
+                                          <Link
+                                            className="ui black button"
+                                            onClick={[Function]}
+                                            role="button"
+                                            to="/incidents/undefined"
+                                          >
+                                            <a
+                                              className="ui black button"
+                                              href="/incidents/undefined"
+                                              onClick={[Function]}
+                                              role="button"
+                                            >
+                                              <Icon
+                                                as="i"
+                                                name="eye"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  className="eye icon"
+                                                  onClick={[Function]}
+                                                />
+                                              </Icon>
+                                              VIEW
+                                            </a>
+                                          </Link>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </Button>
+                                    <Button
+                                      as="button"
+                                      color="red"
+                                      content="DELETE"
+                                      icon="trash alternate outline"
+                                      onClick={[Function]}
+                                    >
+                                      <Ref
+                                        innerRef={
+                                          Object {
+                                            "current": <button
+                                              class="ui red button"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                class="trash alternate outline icon"
+                                              />
+                                              DELETE
+                                            </button>,
+                                          }
+                                        }
+                                      >
+                                        <RefFindNode
+                                          innerRef={
+                                            Object {
+                                              "current": <button
+                                                class="ui red button"
+                                              >
+                                                <i
+                                                  aria-hidden="true"
+                                                  class="trash alternate outline icon"
+                                                />
+                                                DELETE
+                                              </button>,
+                                            }
+                                          }
+                                        >
+                                          <button
+                                            className="ui red button"
+                                            onClick={[Function]}
+                                          >
+                                            <Icon
+                                              as="i"
+                                              name="trash alternate outline"
+                                            >
+                                              <i
+                                                aria-hidden="true"
+                                                className="trash alternate outline icon"
+                                                onClick={[Function]}
+                                              />
+                                            </Icon>
+                                            DELETE
+                                          </button>
+                                        </RefFindNode>
+                                      </Ref>
+                                    </Button>
+                                  </td>
+                                </TableCell>
+                              </tr>
+                            </TableRow>
+                          </tbody>
                         </TableBody>
                       </table>
                     </Table>

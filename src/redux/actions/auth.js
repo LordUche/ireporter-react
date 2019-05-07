@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getCurrentUser } from '../../utils/helpers';
+import { getCurrentUser, getErrorMessages } from '../../utils/helpers';
 import { AUTH_REQUEST, AUTH_SUCCESS, AUTH_FAILURE, LOGOUT } from './types';
 
 export const authRequestAction = () => ({ type: AUTH_REQUEST });
@@ -18,9 +18,7 @@ export const authenticateUser = (authType, data) => async dispatch => {
     localStorage.setItem('token', token);
     dispatch(authSuccessAction(user));
   } catch (err) {
-    const { error, errors } = err.response.data;
-    const messages = errors || [error];
-    dispatch(authFailureAction(messages));
+    dispatch(authFailureAction(getErrorMessages(err)));
   }
 };
 
