@@ -15,7 +15,13 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
   <ConnectFunction>
     <ReportIncidentForm
       created={false}
-      loading={false}
+      incidents={
+        Object {
+          "created": false,
+          "loading": false,
+        }
+      }
+      isLoading={false}
       reportIncident={[Function]}
     >
       <div
@@ -536,77 +542,121 @@ exports[`<ReportIncidentForm /> should match snapshot 1`] = `
                         </div>
                       </FormField>
                     </FormInput>
-                    <FormInput
-                      as={[Function]}
-                      control={[Function]}
-                      fluid={true}
-                      icon="marker"
-                      iconPosition="left"
-                      label="Location"
-                      name="location"
+                    <PlacesAutocomplete
+                      debounce={200}
+                      highlightFirstSuggestion={false}
                       onChange={[Function]}
-                      placeholder="latitude, longitude"
-                      required={true}
-                      transparent={true}
+                      onError={[Function]}
+                      onSelect={[Function]}
+                      searchOptions={Object {}}
+                      shouldFetchSuggestions={true}
                       value=""
                     >
-                      <FormField
-                        control={[Function]}
-                        fluid={true}
-                        icon="marker"
-                        iconPosition="left"
-                        label="Location"
-                        name="location"
-                        onChange={[Function]}
-                        placeholder="latitude, longitude"
-                        required={true}
-                        transparent={true}
-                        value=""
-                      >
-                        <div
-                          className="required field"
+                      <div>
+                        <FormInput
+                          aria-autocomplete="list"
+                          aria-expanded={false}
+                          as={[Function]}
+                          autoComplete="off"
+                          className="location-search-input"
+                          control={[Function]}
+                          disabled={false}
+                          fluid={true}
+                          icon="marker"
+                          iconPosition="left"
+                          label="Location"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onKeyDown={[Function]}
+                          placeholder="Search Places ..."
+                          required={true}
+                          role="combobox"
+                          transparent={true}
+                          type="text"
+                          value=""
                         >
-                          <label>
-                            Location
-                          </label>
-                          <Input
+                          <FormField
+                            aria-autocomplete="list"
+                            aria-expanded={false}
+                            autoComplete="off"
+                            className="location-search-input"
+                            control={[Function]}
+                            disabled={false}
                             fluid={true}
                             icon="marker"
                             iconPosition="left"
-                            name="location"
+                            label="Location"
+                            onBlur={[Function]}
                             onChange={[Function]}
-                            placeholder="latitude, longitude"
+                            onKeyDown={[Function]}
+                            placeholder="Search Places ..."
                             required={true}
+                            role="combobox"
                             transparent={true}
                             type="text"
                             value=""
                           >
                             <div
-                              className="ui fluid transparent left icon input"
+                              className="required field location-search-input"
                             >
-                              <input
-                                name="location"
+                              <label>
+                                Location
+                              </label>
+                              <Input
+                                aria-autocomplete="list"
+                                aria-expanded={false}
+                                autoComplete="off"
+                                disabled={false}
+                                fluid={true}
+                                icon="marker"
+                                iconPosition="left"
+                                onBlur={[Function]}
                                 onChange={[Function]}
-                                placeholder="latitude, longitude"
+                                onKeyDown={[Function]}
+                                placeholder="Search Places ..."
                                 required={true}
+                                role="combobox"
+                                transparent={true}
                                 type="text"
                                 value=""
-                              />
-                              <Icon
-                                as="i"
-                                name="marker"
                               >
-                                <i
-                                  aria-hidden="true"
-                                  className="marker icon"
-                                  onClick={[Function]}
-                                />
-                              </Icon>
+                                <div
+                                  className="ui fluid transparent left icon input"
+                                >
+                                  <input
+                                    aria-autocomplete="list"
+                                    aria-expanded={false}
+                                    autoComplete="off"
+                                    disabled={false}
+                                    onBlur={[Function]}
+                                    onChange={[Function]}
+                                    onKeyDown={[Function]}
+                                    placeholder="Search Places ..."
+                                    required={true}
+                                    role="combobox"
+                                    type="text"
+                                    value=""
+                                  />
+                                  <Icon
+                                    as="i"
+                                    name="marker"
+                                  >
+                                    <i
+                                      aria-hidden="true"
+                                      className="marker icon"
+                                      onClick={[Function]}
+                                    />
+                                  </Icon>
+                                </div>
+                              </Input>
                             </div>
-                          </Input>
-                        </div>
-                      </FormField>
-                    </FormInput>
+                          </FormField>
+                        </FormInput>
+                        <div
+                          className="autocomplete-dropdown-container"
+                        />
+                      </div>
+                    </PlacesAutocomplete>
                     <FormInput
                       accept="image/*"
                       as={[Function]}

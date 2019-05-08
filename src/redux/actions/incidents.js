@@ -18,7 +18,7 @@ export const get = (type, id) => async dispatch => {
   dispatch(loadIncidents());
   try {
     const token = localStorage.getItem('token');
-    const res = await axios.get(`${apiBaseUrl}/${type}s/${id}`, {
+    const res = await axios.get(`${apiBaseUrl}/${type}/${id}`, {
       headers: { 'access-token': token },
     });
     dispatch(updateStore(types.FETCH_INCIDENT, res.data.data[0]));
@@ -58,6 +58,7 @@ export const report = data => async dispatch => {
     } = await axios.post(baseUrl, data, {
       headers: { 'access-token': token },
     });
+    await dispatch(get(`${data.type}s`, incident.id));
     dispatch(updateStore(types.CREATE_INCIDENT, { id: incident.id }));
   } catch (err) {
     dispatch(updateStore(types.INCIDENT_ERROR, getErrorMessages(err)));

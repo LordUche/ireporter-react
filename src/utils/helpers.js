@@ -44,7 +44,9 @@ export const getErrorMessages = err => {
   let messages;
   if (err.response) {
     const { error, errors } = err.response.data;
-    messages = errors || [error];
+    messages = errors || [error.message || error];
+  } else if (err.message && err.message === 'Network Error') {
+    messages = [err.message];
   } else messages = ['An error occurred'];
   handleMessages(messages, 'error');
   return messages;
@@ -73,4 +75,9 @@ export const uploadMedia = async data => {
   }));
   data.Images = media.filter(m => m.type === 'image').map(img => img.url);
   data.Videos = media.filter(m => m.type === 'video').map(vid => vid.url);
+};
+
+export const getMapCenter = (coords = '') => {
+  const [lat, lng] = coords.split(',').map(parseFloat);
+  return { lat, lng };
 };

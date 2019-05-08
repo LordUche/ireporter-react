@@ -83,6 +83,11 @@ describe('incidents action', () => {
     helpers.uploadMedia.mockRestore();
     expect(store.getActions()).toEqual([
       { type: LOAD_INCIDENTS },
+      { type: LOAD_INCIDENTS },
+      {
+        type: FETCH_INCIDENT,
+        payload: payload[0],
+      },
       {
         type: CREATE_INCIDENT,
         payload: { id: 1 },
