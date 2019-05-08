@@ -19,6 +19,9 @@ export class App extends React.Component {
     window.addEventListener('app-message', e =>
       showToast(e.detail.messages, e.detail.type)
     );
+    window.addEventListener('offline', () =>
+      showToast(['Please check your internet connectivity'], 'error')
+    );
   }
 
   handleSidebarShow = () => this.setState({ sidebarOpen: true });

@@ -5,7 +5,8 @@
     "NODE_ENV": { "required": true },
     "API_BASE_URL": { "required": true },
     "CLOUD_NAME": { "required": true },
-    "UPLOAD_PRESET": { "required": true }
+    "UPLOAD_PRESET": { "required": true },
+    "MAPS_API_KEY": { "required": true }
   },
   "formation": {},
   "name": "ireporter-react",

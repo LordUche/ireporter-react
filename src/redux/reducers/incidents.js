@@ -9,7 +9,7 @@ const incidentReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        error: undefined,
+        errors: undefined,
         created: false,
         id: undefined,
       };
@@ -19,7 +19,7 @@ const incidentReducer = (state = initialState, action) => {
         ...state,
         [action.payload.id]: action.payload,
         loading: false,
-        error: undefined,
+        errors: undefined,
         id: action.payload.id,
       };
 
@@ -29,7 +29,7 @@ const incidentReducer = (state = initialState, action) => {
         ...mapKeys(action.payload),
         loading: false,
         created: false,
-        error: undefined,
+        errors: undefined,
         id: undefined,
       };
 
@@ -39,7 +39,7 @@ const incidentReducer = (state = initialState, action) => {
         created: true,
         loading: false,
         id: action.payload.id,
-        error: undefined,
+        errors: undefined,
       };
 
     case types.DELETE_INCIDENT: {
@@ -49,7 +49,7 @@ const incidentReducer = (state = initialState, action) => {
         ...newState,
         loading: false,
         created: false,
-        error: undefined,
+        errors: undefined,
         id: undefined,
       };
     }

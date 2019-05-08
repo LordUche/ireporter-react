@@ -69,6 +69,7 @@ module.exports = {
       'API_BASE_URL',
       'CLOUD_NAME',
       'UPLOAD_PRESET',
+      'MAPS_API_KEY',
     ]),
     new HtmlWebpackPlugin({
       template: path.resolve('./public/index.html'),

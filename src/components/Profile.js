@@ -88,7 +88,7 @@ class Profile extends Component {
                     <Table.Cell>
                       <Button
                         as={Link}
-                        to={`/incidents/${incident.id}`}
+                        to={`/${incident.type}s/${incident.id}`}
                         icon="eye"
                         color="black"
                         content="VIEW"

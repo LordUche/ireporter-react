@@ -57,6 +57,15 @@ const Sidenav = ({ children, visible, hideSidebar, loggedIn, logout }) => {
             </Menu.Item>
             <Menu.Item
               as={Link}
+              to="/report"
+              onClick={hideSidebar}
+              className="sidebar__report-button"
+            >
+              <Icon name="bullhorn" />
+              Report
+            </Menu.Item>
+            <Menu.Item
+              as={Link}
               to="/"
               onClick={() => {
                 hideSidebar();
